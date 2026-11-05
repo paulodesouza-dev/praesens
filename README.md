@@ -13,9 +13,9 @@
 ![Node.js](https://img.shields.io/badge/Node.js-0E1612?style=flat-square&logo=nodedotjs&logoColor=A9CBA3)
 ![MySQL](https://img.shields.io/badge/MySQL-0E1612?style=flat-square&logo=mysql&logoColor=A9CBA3)
 
-<img src="assets/readme/sobre.svg" alt="Sobre o projeto" width="100%">
-<img src="assets/readme/arquitetura.svg" alt="Arquitetura do projeto" width="100%">
-<img src="assets/readme/tecnologias.svg" alt="Tecnologias utilizadas" width="100%">
+![Sobre](assets/readme/sobre.svg)
+![Arquitetura](assets/readme/arquitetura.svg)
+![Tecnologias](assets/readme/tecnologias.svg)
 
 </div>
 
