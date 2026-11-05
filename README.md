@@ -13,7 +13,9 @@
 ![Node.js](https://img.shields.io/badge/Node.js-0E1612?style=flat-square&logo=nodedotjs&logoColor=A9CBA3)
 ![MySQL](https://img.shields.io/badge/MySQL-0E1612?style=flat-square&logo=mysql&logoColor=A9CBA3)
 
-**[Sobre](#sobre)** · **[Funcionalidades](#funcionalidades)** · **[Arquitetura](#arquitetura)** · **[Tecnologias](#tecnologias)** · **[Como rodar](#como-rodar)** · **[Autor](#autor)**
+<img src="assets/readme/sobre.svg" alt="Sobre o projeto" width="100%">
+<img src="assets/readme/arquitetura.svg" alt="Arquitetura do projeto" width="100%">
+<img src="assets/readme/tecnologias.svg" alt="Tecnologias utilizadas" width="100%">
 
 </div>
 
@@ -29,7 +31,7 @@ O tema tem significado pessoal para mim: práticas de respiração e atenção a
 
 ## Objetivos
 
-<div align="center">
+<div align="left">
 🌿 Criar um espaço digital para fazer práticas de respiração e atenção plena. <br> <br>
 🌿 Guiar práticas de respiração com instruções visuais, ritmo e temporização. <br> <br>
 🌿 Oferecer um espaço livre de escrita para pensamentos e reflexões, sem perguntas predefinidas. <br> <br>
@@ -63,7 +65,7 @@ A prática guia o usuário por três momentos, representados por uma esfera de l
 
 **<div align="left"> Os indicadores previstos são:** </div> <br>
 
-<div align="center">
+<div align="left">
 🌿 Quantidade de práticas realizadas. <br> <br>
 🌿 Tempo total de respiração. <br> <br>
 🌿 Histórico das práticas. <br> <br>
@@ -139,7 +141,7 @@ Assistentes de IA são usados como **apoio ao aprendizado**, para tirar dúvidas
 
 ### Paulo Henrique de Souza
 
-Estudante da **SPTech — São Paulo Tech School**
+Estudante da **São Paulo Tech School**
 
 [![GitHub](https://img.shields.io/badge/@paulodesouza-dev-0E1612?style=flat-square&logo=github&logoColor=A9CBA3)](https://github.com/paulodesouza-dev)
 
