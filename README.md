@@ -29,11 +29,11 @@ O tema tem significado pessoal para mim: práticas de respiração e atenção a
 
 ## Objetivos
 
-🌿 Criar um espaço digital para fazer práticas de respiração e atenção plena. <br>
-🌿 Guiar práticas de respiração com instruções visuais, ritmo e temporização. <br>
-🌿 Oferecer um espaço livre de escrita para pensamentos e reflexões, sem perguntas predefinidas. <br>
-🌿 Registrar a jornada de cada pessoa e exibi-la em um dashboard com indicadores. <br>
-🌿 Aplicar na prática os conteúdos do primeiro semestre na SPTech.
+- Criar um espaço digital para fazer práticas de respiração e atenção plena. 
+- Guiar práticas de respiração com instruções visuais, ritmo e temporização.
+- Oferecer um espaço livre de escrita para pensamentos e reflexões, sem perguntas predefinidas.
+- Registrar a jornada de cada pessoa e exibi-la em um dashboard com indicadores.
+- Aplicar na prática os conteúdos do primeiro semestre na SPTech.
 
 ---
 
@@ -59,12 +59,12 @@ A prática guia o usuário por três momentos, representados por uma esfera de l
 
 ### Dashboard
 
-O painel apresenta os dados registrados pela própria pessoa. Os indicadores previstos são: <br> <br>
+Os indicadores previstos são: <br>
 
-🌿 quantidade de práticas realizadas; <br>
-🌿 tempo total de respiração; <br>
-🌿 histórico das práticas; <br>
-🌿 outras métricas a definir na etapa de Pesquisa e Inovação. <br>
+- Quantidade de práticas realizadas;
+- Tempo total de respiração;
+- Histórico das práticas;
+- Outras métricas a definir na etapa de Pesquisa e Inovação.
 
 ---
 
@@ -84,7 +84,7 @@ flowchart LR
 
 ## Identidade visual
 
-**Por que a samambaia.** É uma planta de que gosto muito, e não só pela estética. A samambaia é uma das linhagens de plantas mais antigas do planeta e já ajudava a formar as grandes florestas do período Carbonífero, entre cerca de 359 e 299 milhões de anos atrás. Ela não produz flores, nem sementes, na verdade, se reproduz por esporos. É minha planta favorita, então decidi que precisava implementar nesse projeto de alguma forma!!
+A samambaia é uma planta que gosto muito, e não só pela estética. Essa é uma das plantas mais antigas do planeta e já ajudava a formar as grandes florestas do período Carbonífero, entre cerca de 359 e 299 milhões de anos atrás. Ela não produz flores, nem sementes, na verdade, se reproduz por esporos. É minha planta favorita, então decidi que precisava implementar nesse projeto de alguma forma!!
 <div align="center">
 
 <img src="assets/readme/logo.svg" alt="Símbolo do Praesens: uma samambaia com a ponta em ocre" width="90">
@@ -145,7 +145,7 @@ Estudante da **SPTech — São Paulo Tech School**
 
 ## Observação
 
-Este projeto foi desenvolvido para fins acadêmicos, com o objetivo de aplicar os conhecimentos adquiridos durante o curso. Além do desenvolvimento técnico, o Praesens representa a minha relação pessoal com a respiração e a atenção ao presente.
+Este projeto foi desenvolvido para fins acadêmicos, com o objetivo de aplicar os conhecimentos adquiridos durante o curso. Além do desenvolvimento técnico, o Praesens representa a minha relação pessoal com a respiração e práticas de atenção plena.
 
 <div align="center">
 
