@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/readme/banner.svg" alt="Praesens: volte ao presente" width="100%">
+<img src="assets/readme/banner.svg" alt="Praesens: esteja aqui e agora" width="100%">
 
 <br>
 
@@ -21,7 +21,7 @@
 
 ## Sobre
 
-O **Praesens** é uma plataforma web de atenção plena (*mindfulness*), respiração guiada e reflexão pessoal. O nome vem do latim *praesens*, "aqui e agora". O projeto foi desenvolvido como Projeto Individual da Sprint 3 na SPTech.
+A **Praesens** é uma plataforma web de atenção plena (*mindfulness*), respiração guiada e reflexão pessoal. O nome vem do latim *praesens*, "aqui e agora". O projeto foi desenvolvido como Projeto Individual da Sprint 3 na SPTech.
 
 O tema tem significado pessoal para mim: práticas de respiração e atenção ao presente me ajudam a cultivar paz e alegria. Com o Praesens, quero transformar parte dessa experiência em um momento de pausa para outras pessoas.
 
@@ -29,11 +29,11 @@ O tema tem significado pessoal para mim: práticas de respiração e atenção a
 
 ## Objetivos
 
-- Criar um espaço digital para fazer práticas de respiração e atenção plena. 
-- Guiar práticas de respiração com instruções visuais, ritmo e temporização.
-- Oferecer um espaço livre de escrita para pensamentos e reflexões, sem perguntas predefinidas.
-- Registrar a jornada de cada pessoa e exibi-la em um dashboard com indicadores.
-- Aplicar na prática os conteúdos do primeiro semestre na SPTech.
+🌿 Criar um espaço digital para fazer práticas de respiração e atenção plena. <br>
+🌿 Guiar práticas de respiração com instruções visuais, ritmo e temporização. <br>
+🌿 Oferecer um espaço livre de escrita para pensamentos e reflexões, sem perguntas predefinidas. <br>
+🌿 Registrar a jornada de cada pessoa e exibi-la em um dashboard com indicadores. <br>
+🌿 Aplicar na prática os conteúdos do primeiro semestre na SPTech.
 
 ---
 
@@ -61,10 +61,10 @@ A prática guia o usuário por três momentos, representados por uma esfera de l
 
 Os indicadores previstos são: <br>
 
-- Quantidade de práticas realizadas;
-- Tempo total de respiração;
-- Histórico das práticas;
-- Outras métricas a definir na etapa de Pesquisa e Inovação.
+🌿 Quantidade de práticas realizadas. <br>
+🌿 Tempo total de respiração. <br>
+🌿 Histórico das práticas. <br>
+🌿 Outras métricas a definir na etapa de Pesquisa e Inovação. <br>
 
 ---
 
@@ -111,7 +111,7 @@ A samambaia é uma planta que gosto muito, e não só pela estética. Essa é um
 
 ```bash
 # 1. Clone o repositório
-git clone https://github.com/SEU-USUARIO/praesens.git
+git clone https://github.com/paulodesouza-dev/praesens.git
 
 # 2. Entre na pasta
 cd praesens
