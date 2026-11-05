@@ -29,10 +29,10 @@ O tema tem significado pessoal para mim: práticas de respiração e atenção a
 
 ## Objetivos
 
-🌿 Criar um espaço digital para fazer práticas de respiração e atenção plena.
-🌿 Guiar práticas de respiração com instruções visuais, ritmo e temporização.
-🌿 Oferecer um espaço livre de escrita para pensamentos e reflexões, sem perguntas predefinidas.
-🌿 Registrar a jornada de cada pessoa e exibi-la em um dashboard com indicadores.
+🌿 Criar um espaço digital para fazer práticas de respiração e atenção plena. <br>
+🌿 Guiar práticas de respiração com instruções visuais, ritmo e temporização. <br>
+🌿 Oferecer um espaço livre de escrita para pensamentos e reflexões, sem perguntas predefinidas. <br>
+🌿 Registrar a jornada de cada pessoa e exibi-la em um dashboard com indicadores. <br>
 🌿 Aplicar na prática os conteúdos do primeiro semestre na SPTech.
 
 ---
@@ -59,12 +59,12 @@ A prática guia o usuário por três momentos, representados por uma esfera de l
 
 ### Dashboard
 
-O painel apresenta os dados registrados pela própria pessoa. Os indicadores previstos são:
+O painel apresenta os dados registrados pela própria pessoa. Os indicadores previstos são: <br> <br>
 
-🌿 quantidade de práticas realizadas;
-🌿 tempo total de respiração;
-🌿 histórico das práticas;
-🌿 outras métricas a definir na etapa de Pesquisa e Inovação.
+🌿 quantidade de práticas realizadas; <br>
+🌿 tempo total de respiração; <br>
+🌿 histórico das práticas; <br>
+🌿 outras métricas a definir na etapa de Pesquisa e Inovação. <br>
 
 ---
 
@@ -137,7 +137,7 @@ Assistentes de IA são usados como **apoio ao aprendizado**, para tirar dúvidas
 
 Estudante da **SPTech — São Paulo Tech School**
 
-[![GitHub](https://img.shields.io/badge/@SEU--USUARIO-0E1612?style=flat-square&logo=github&logoColor=A9CBA3)](https://github.com/paulodesouza-dev)
+[![GitHub](https://img.shields.io/badge/@paulodesouza-dev-0E1612?style=flat-square&logo=github&logoColor=A9CBA3)](https://github.com/paulodesouza-dev)
 
 </div>
 
