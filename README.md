@@ -59,7 +59,7 @@ A prática guia o usuário por três momentos, representados por uma esfera de l
 
 ### Dashboard
 
-<div align="center"> **Os indicadores previstos são:** </div> <br> <br>
+**<div align="right"> Os indicadores previstos são:** </div> <br>
 
 🌿 Quantidade de práticas realizadas. <br> <br>
 🌿 Tempo total de respiração. <br> <br>
