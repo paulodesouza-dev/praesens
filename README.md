@@ -21,21 +21,19 @@
 
 ## Sobre
 
-O **Praesens** é uma plataforma web de atenção plena (*mindfulness*), respiração guiada, reflexão pessoal e gestão do tempo presente. O nome vem do latim *praesens*, "aqui e agora". O projeto foi desenvolvido como **Projeto Individual** da Sprint 3 na **SPTech**.
+O **Praesens** é uma plataforma web de atenção plena (*mindfulness*), respiração guiada e reflexão pessoal. O nome vem do latim *praesens*, "aqui e agora". O projeto foi desenvolvido como Projeto Individual da Sprint 3 na SPTech.
 
-O tema tem significado pessoal para mim: práticas de respiração e atenção ao presente me ajudam a encontrar mais presença, paz, tranquilidade e alegria. Com o Praesens, quero transformar parte dessa experiência em um momento de pausa para outras pessoas.
-
-A ideia central é criar um ambiente digital simples, bonito e acolhedor, no qual a pessoa possa **desacelerar, praticar a respiração, registrar seus pensamentos e acompanhar a própria jornada**.
+O tema tem significado pessoal para mim: práticas de respiração e atenção ao presente me ajudam a cultivar paz e alegria. Com o Praesens, quero transformar parte dessa experiência em um momento de pausa para outras pessoas.
 
 ---
 
 ## Objetivos
 
-- Criar um espaço digital para fazer práticas de respiração e atenção plena.
-- Guiar práticas de respiração com instruções visuais, ritmo e temporização.
-- Oferecer um espaço livre de escrita para pensamentos e reflexões, sem perguntas predefinidas.
-- Registrar a jornada de cada pessoa e exibi-la em um dashboard com indicadores.
-- Aplicar na prática os conteúdos do primeiro semestre na SPTech.
+🌿 Criar um espaço digital para fazer práticas de respiração e atenção plena.
+🌿 Guiar práticas de respiração com instruções visuais, ritmo e temporização.
+🌿 Oferecer um espaço livre de escrita para pensamentos e reflexões, sem perguntas predefinidas.
+🌿 Registrar a jornada de cada pessoa e exibi-la em um dashboard com indicadores.
+🌿 Aplicar na prática os conteúdos do primeiro semestre na SPTech.
 
 ---
 
@@ -49,22 +47,24 @@ A ideia central é criar um ambiente digital simples, bonito e acolhedor, no qua
 | **Diário pessoal** | Espaço livre para escrever pensamentos, sentimentos e reflexões | Planejado |
 | **Dashboard** | Painel visual para acompanhar a jornada, com indicadores das práticas | Planejado |
 
+---
+
 ### Respiração guiada
 
-A prática conduz a pessoa por três momentos, representados por uma esfera de luz que se expande, permanece e se recolhe. Cada prática concluída será registrada no banco de dados.
+A prática guia o usuário por três momentos, representados por uma esfera de luz que se expande, permanece e se recolhe. Cada prática concluída será registrada no banco de dados.
 
 <img src="assets/readme/respiracao.svg" alt="Conceito da respiração guiada: inspire, segure e solte" width="100%">
 
-<sub>Conceito visual da respiração guiada. A tela final será implementada em HTML, CSS e JavaScript.</sub>
+---
 
 ### Dashboard
 
 O painel apresenta os dados registrados pela própria pessoa. Os indicadores previstos são:
 
-- quantidade de práticas realizadas;
-- tempo total de respiração;
-- histórico das práticas;
-- outras métricas a definir na etapa de Pesquisa e Inovação.
+🌿 quantidade de práticas realizadas;
+🌿 tempo total de respiração;
+🌿 histórico das práticas;
+🌿 outras métricas a definir na etapa de Pesquisa e Inovação.
 
 ---
 
@@ -84,8 +84,7 @@ flowchart LR
 
 ## Identidade visual
 
-O conceito visual vem do **komorebi**, a luz do sol que passa entre as folhas: uma floresta ao anoitecer, em tons escuros, com uma luz quente de um canto e sombras de samambaia por cima. O resultado busca ser limpo, natural e vivo, com a calma de um espaço de pausa.
-
+**Por que a samambaia.** É uma planta de que gosto muito, e não só pela estética. A samambaia é uma das linhagens de plantas mais antigas do planeta e já ajudava a formar as grandes florestas do período Carbonífero, entre cerca de 359 e 299 milhões de anos atrás. Ela não produz flores, nem sementes, na verdade, se reproduz por esporos. É minha planta favorita, então decidi que precisava implementar nesse projeto de alguma forma!!
 <div align="center">
 
 <img src="assets/readme/logo.svg" alt="Símbolo do Praesens: uma samambaia com a ponta em ocre" width="90">
@@ -138,7 +137,7 @@ Assistentes de IA são usados como **apoio ao aprendizado**, para tirar dúvidas
 
 Estudante da **SPTech — São Paulo Tech School**
 
-[![GitHub](https://img.shields.io/badge/@SEU--USUARIO-0E1612?style=flat-square&logo=github&logoColor=A9CBA3)](https://github.com/SEU-USUARIO)
+[![GitHub](https://img.shields.io/badge/@SEU--USUARIO-0E1612?style=flat-square&logo=github&logoColor=A9CBA3)](https://github.com/paulodesouza-dev)
 
 </div>
 
