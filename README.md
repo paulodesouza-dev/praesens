@@ -14,8 +14,12 @@
 ![MySQL](https://img.shields.io/badge/MySQL-0E1612?style=flat-square&logo=mysql&logoColor=A9CBA3)
 
 ![Sobre](assets/readme/sobre.svg)
+![Funcionalidades](assets/readme/funcionalidades.svg)
 ![Arquitetura](assets/readme/arquitetura.svg)
+![Identidade visual](assets/readme/identidade-visual.svg)
 ![Tecnologias](assets/readme/tecnologias.svg)
+![Como rodar](assets/readme/como-rodar.svg)
+![Autor](assets/readme/autor.svg)
 
 </div>
 
