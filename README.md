@@ -29,10 +29,10 @@ O tema tem significado pessoal para mim: práticas de respiração e atenção a
 
 ## Objetivos
 
-🌿 Criar um espaço digital para fazer práticas de respiração e atenção plena. <br>
-🌿 Guiar práticas de respiração com instruções visuais, ritmo e temporização. <br>
-🌿 Oferecer um espaço livre de escrita para pensamentos e reflexões, sem perguntas predefinidas. <br>
-🌿 Registrar a jornada de cada pessoa e exibi-la em um dashboard com indicadores. <br>
+🌿 Criar um espaço digital para fazer práticas de respiração e atenção plena. <br> <br>
+🌿 Guiar práticas de respiração com instruções visuais, ritmo e temporização. <br> <br>
+🌿 Oferecer um espaço livre de escrita para pensamentos e reflexões, sem perguntas predefinidas. <br> <br>
+🌿 Registrar a jornada de cada pessoa e exibi-la em um dashboard com indicadores. <br> <br>
 🌿 Aplicar na prática os conteúdos do primeiro semestre na SPTech.
 
 ---
@@ -59,12 +59,12 @@ A prática guia o usuário por três momentos, representados por uma esfera de l
 
 ### Dashboard
 
-Os indicadores previstos são: <br>
+Os indicadores previstos são: <br> <br>
 
-🌿 Quantidade de práticas realizadas. <br>
-🌿 Tempo total de respiração. <br>
-🌿 Histórico das práticas. <br>
-🌿 Outras métricas a definir na etapa de Pesquisa e Inovação. <br>
+🌿 Quantidade de práticas realizadas. <br> <br>
+🌿 Tempo total de respiração. <br> <br>
+🌿 Histórico das práticas. <br> <br>
+🌿 Outras métricas a definir na etapa de Pesquisa e Inovação. <br> <br>
 
 ---
 
