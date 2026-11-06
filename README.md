@@ -57,7 +57,7 @@ O tema tem significado pessoal para mim, práticas de respiração e atenção a
 
 ---
 
-### Respiração guiada
+## Respiração guiada
 
 A prática guia o usuário por três momentos, representados por uma esfera de luz que se expande, permanece e se recolhe. Cada prática concluída será registrada no banco de dados.
 
@@ -65,7 +65,7 @@ A prática guia o usuário por três momentos, representados por uma esfera de l
 
 ---
 
-### Dashboard
+## Dashboard
 
 **<div align="left"> Os indicadores previstos são:** </div> <br>
 
