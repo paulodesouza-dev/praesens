@@ -163,7 +163,7 @@ Este projeto foi desenvolvido para fins acadêmicos, com o objetivo de aplicar o
 
 ---
 
-## English summary
+**English summary**
 
 *<div align="center"> A short overview for international readers. The full documentation is in Portuguese above. </div>*
 
@@ -176,10 +176,10 @@ Praesens is a web platform for mindfulness, guided breathing and personal reflec
 
 ### Planned features
 
-🌿 *Guided breathing:* an interactive practice with visual cues, rhythm and timing.
-🌿 *Personal journal:* a free writing space for thoughts and reflections, with no predefined questions.
-🌿 *Dashboard:* a visual overview of the user's journey, such as number of practices, total breathing time and history.
-🌿 *Sign up and login:* user accounts with form validation in JavaScript.
+🌿 *Guided breathing:* an interactive practice with visual cues, rhythm and timing. <br>
+🌿 *Personal journal:* a free writing space for thoughts and reflections, with no predefined questions. <br>
+🌿 *Dashboard:* a visual overview of the user's journey, such as number of practices, total breathing time and history. <br>
+🌿 *Sign up and login:* user accounts with form validation in JavaScript. <br>
 
 ### Tech stack
 
