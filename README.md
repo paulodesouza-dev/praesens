@@ -73,7 +73,7 @@ A prática guia o usuário por três momentos, representados por uma esfera de l
 🌿 Quantidade de práticas realizadas. <br> <br>
 🌿 Tempo total de respiração. <br> <br>
 🌿 Histórico das práticas. <br> <br>
-🌿 Outras métricas a definir na etapa de Pesquisa e Inovação. <br> <br>
+🌿 Outras métricas a definir na etapa de Pesquisa e Inovação. <br>
 </div>
 
 ---
