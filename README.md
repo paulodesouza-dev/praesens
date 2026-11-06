@@ -161,25 +161,25 @@ Este projeto foi desenvolvido para fins acadêmicos, com o objetivo de aplicar o
 
 </div> <br>
 
---- <br>
+---
 
 ## English summary
 
-> A short overview for international readers. The full documentation is in Portuguese above.
+*<div align="center"> A short overview for international readers. The full documentation is in Portuguese above. </div>*
 
 Praesens is a web platform for mindfulness, guided breathing and personal reflection. The name comes from the Latin *praesens*, meaning "present", and reflects the idea of being here and now. It is an individual project developed during my first semester at São Paulo Tech School (SPTech).
 
-**Why this project.** Breathing practices and present-moment awareness help me cultivate peace and joy, and I want to share that experience with other people through a simple, calm and welcoming digital space.
+*Why this project?* Breathing practices and present moment awareness help me cultivate peace and joy, and I want to share that experience with other people through a simple, calm and welcoming digital space.
 
-**Why a fern.** The fern is one of the oldest plants on Earth. It already helped form the great forests of the Carboniferous period, roughly 359 to 299 million years ago, long before our species existed. It is my favorite plant, so it became the symbol of the project.
+*Why a fern?* The fern is one of the oldest plants on Earth. It already helped form the great forests of the Carboniferous period, roughly 359 to 299 million years ago, long before our species existed. I personally find this amazing, it is my favorite plant, so it became the symbol of the project.
 
 
 ### Planned features
 
-- **Guided breathing:** an interactive practice with visual cues, rhythm and timing.
-- **Personal journal:** a free writing space for thoughts and reflections, with no predefined questions.
-- **Dashboard:** a visual overview of the user's journey, such as number of practices, total breathing time and history.
-- **Sign up and login:** user accounts with form validation in JavaScript.
+🌿 *Guided breathing:* an interactive practice with visual cues, rhythm and timing.
+🌿 *Personal journal:* a free writing space for thoughts and reflections, with no predefined questions.
+🌿 *Dashboard:* a visual overview of the user's journey, such as number of practices, total breathing time and history.
+🌿 *Sign up and login:* user accounts with form validation in JavaScript.
 
 ### Tech stack
 
