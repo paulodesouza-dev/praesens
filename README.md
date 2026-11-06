@@ -67,7 +67,7 @@ A prática guia o usuário por três momentos, representados por uma esfera de l
 
 ## Dashboard
 
-**<div align="left"> Os indicadores previstos são:** </div> <br>
+**<div align="left"> Os indicadores previstos são:** </div>
 
 <div align="left">
 🌿 Quantidade de práticas realizadas. <br> <br>
