@@ -163,6 +163,7 @@ Este projeto foi desenvolvido para fins acadêmicos, com o objetivo de aplicar o
 
 ---
 <div align="center">
+
 ### English summary </div>
 
 *<div align="center"> A short overview for international readers. The full documentation is in Portuguese above. </div>*
