@@ -27,9 +27,9 @@
 
 ## Sobre
 
-A **Praesens** é uma plataforma web de atenção plena (*mindfulness*), respiração guiada e reflexão pessoal. O nome vem do latim *praesens*, "aqui e agora". O projeto foi desenvolvido como Projeto Individual da Sprint 3 na SPTech.
+A Praesens é uma plataforma web de atenção plena (mindfulness), respiração guiada e reflexão pessoal. O nome vem do latim praesens, "aqui e agora". O projeto foi desenvolvido como Projeto Individual da Sprint 3 na SPTech.
 
-O tema tem significado pessoal para mim: práticas de respiração e atenção ao presente me ajudam a cultivar paz e alegria. Com o Praesens, quero transformar parte dessa experiência em um momento de pausa para outras pessoas.
+O tema tem significado pessoal para mim, práticas de respiração e atenção ao presente me ajudam a cultivar paz e alegria. Com esse projeto, quero compartilhar o que sinto sobre esse tema com outras pessoas.
 
 ---
 
@@ -94,7 +94,7 @@ flowchart LR
 
 ## Identidade visual
 
-A samambaia é uma planta que gosto muito, e não só pela estética. Essa é uma das plantas mais antigas do planeta e já ajudava a formar as grandes florestas do período Carbonífero, entre cerca de 359 e 299 milhões de anos atrás. Ela não produz flores, nem sementes, na verdade, se reproduz por esporos. É minha planta favorita, então decidi que precisava implementar nesse projeto de alguma forma!!
+A samambaia é uma planta que gosto muito, e não só pela estética. Essa é uma das plantas mais antigas do planeta e já ajudava a formar as grandes florestas do período Carbonífero, entre cerca de 359 e 299 milhões de anos atrás. Ou seja, ela já estava por aqui muito antes da nossa espécie sequer esboçar existir. Por esse e outros motivos, essa é a minha planta favorita, então decidi que precisava implementar nesse projeto de alguma forma!!
 <div align="center">
 
 <img src="assets/readme/logo.svg" alt="Símbolo do Praesens: uma samambaia com a ponta em ocre" width="90">
@@ -131,7 +131,7 @@ cd praesens
 
 ## Uso de IA
 
-Assistentes de IA são usados como **apoio ao aprendizado**, para tirar dúvidas, revisar e entender erros, conforme as regras do projeto. O registro do que foi pedido, usado e alterado está no [Diário de Prompts](docs/diario-de-prompts.md).
+Assistentes de IA são usados como apoio ao aprendizado, para tirar dúvidas, revisar e entender erros, conforme as regras do projeto. O registro do que foi pedido, usado e alterado está no [Diário de Prompts](..\\praesens\docs\diario-de-prompts\diario-de-prompts.md).
 
 ---
 
