@@ -166,7 +166,9 @@ Este projeto foi desenvolvido para fins acadêmicos, com o objetivo de aplicar o
 
 ### English summary </div>
 
-*<div align="center"> A short overview for international readers. The full documentation is in Portuguese above. </div>*
+*<div align="center"> A short overview for international readers. The full documentation is in Portuguese above. </div>* 
+
+### Context
 
 Praesens is a web platform for mindfulness, guided breathing and personal reflection. The name comes from the Latin *praesens*, meaning "present", and reflects the idea of being here and now. It is an individual project developed during my first semester at São Paulo Tech School (SPTech).
 
