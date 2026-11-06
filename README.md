@@ -131,7 +131,7 @@ cd praesens
 
 ## Uso de IA
 
-Assistentes de IA são usados como apoio ao aprendizado, para tirar dúvidas, revisar e entender erros, conforme as regras do projeto. O registro do que foi pedido, usado e alterado está no [Diário de Prompts](..\\praesens\docs\diario-de-prompts\diario-de-prompts.md).
+Assistentes de IA são usados como apoio ao aprendizado, para tirar dúvidas, revisar e entender erros, conforme as regras do projeto. O registro do que foi pedido, usado e alterado está no [Diário de Prompts](praesens\docs\diario-de-prompts\diario-de-prompts.md).
 
 ---
 
