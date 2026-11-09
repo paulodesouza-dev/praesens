@@ -111,7 +111,7 @@ A samambaia é uma planta que gosto muito, e não só pela estética. Essa é um
 | Estilo | CSS3 | Identidade visual e responsividade | Planejado |
 | Lógica | JavaScript | Validação de formulários, respiração guiada e cálculos do dashboard | Planejado |
 | API | Node.js (web-data-viz) | Cadastro, login e consulta ao banco de dados | Planejado |
-| Banco de dados | MySQL, em uma VM Linux | Usuários, práticas e diário | Planejado |
+| Banco de dados | MySQL, em uma VM Linux | Usuários, práticas e diário | Em uso |
 | Versionamento | Git e GitHub | Evolução do código | Em uso |
 | Planejamento | Trello | Organização das entregas | Em uso |
 
