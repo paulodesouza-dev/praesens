@@ -38,7 +38,7 @@ O tema tem significado pessoal para mim, práticas de respiração e atenção a
 <div align="left">
 🌿 Criar um espaço digital para fazer práticas de respiração e atenção plena. <br> <br>
 🌿 Guiar práticas de respiração com instruções visuais, ritmo e temporização. <br> <br>
-🌿 Oferecer um espaço livre de escrita para pensamentos e reflexões após cada prática. <br> <br>
+🌿 Oferecer um espaço livre de escrita para pensamentos e reflexões, sem perguntas predefinidas. <br> <br>
 🌿 Registrar a jornada de cada pessoa e exibi-la em um dashboard com indicadores. <br> <br>
 🌿 Aplicar na prática os conteúdos do primeiro semestre na SPTech.
 </div>
@@ -72,6 +72,7 @@ A prática guia o usuário por três momentos, representados por uma esfera de l
 <div align="left">
 🌿 Quantidade de práticas realizadas. <br> <br>
 🌿 Tempo total de respiração. <br> <br>
+🌿 Histórico das práticas. <br> <br>
 🌿 Outras métricas a definir na etapa de Pesquisa e Inovação. <br>
 </div>
 
