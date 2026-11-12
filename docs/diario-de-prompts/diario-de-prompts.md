@@ -14,3 +14,4 @@ Registro de como usei assistentes de IA no projeto: o que pedi, o que usei e o q
 | 06/11/2026 | Claude | Pedi para escrever uma versão sumarizada do README em língua inglesa para possíveis leitores internacionais |  |  | |
 | 09/11/2026 | Claude | Pedi auxílio para entender melhor como seria a regra de negócio entre a entidade usuário e pática|  | Mudei a relação de n:n para 1:n entre a tabela usuário e prática | |
 | 10/11/2026 | Claude | Ajustes finais na cardinalidade entere as entidades "prática" e "diário", envolvendo mais as perguntas: "como essas tabelas se relacionam e por quê?" | |
+| 11/11/2026 | Claude | Pedi para o claude me auxíliar na estruturação e formatação da documentação do projeto| Criação de deesenhos e polimento de explicações mais técnicas do projeto, além de estruturação adequada no storytelling da contextualização do projeto |
