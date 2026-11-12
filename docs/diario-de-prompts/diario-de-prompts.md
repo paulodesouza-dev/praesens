@@ -4,7 +4,7 @@ Registro de como usei assistentes de IA no projeto: o que pedi, o que usei e o q
 
 **Assistente(s) utilizado(s):** Claude (Anthropic)
 
-| Data | Assistente | O que pedi | |
+| Data | Assistente | O que pedi | informações adicionais |
 |---|---|---|---|
 | 03/11/2026 | Claude | Enviei o contexto-base do Praesens e o PDF da Aula 09 e pedi um alinhamento do escopo |  | 
 | 03/11/2026 | Claude | Pedi uma reorganização do Trello com cards, checklists, prazos e descrições |  | 
