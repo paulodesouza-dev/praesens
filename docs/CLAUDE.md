@@ -7,4 +7,4 @@ Lembre que as cores do site são: NOITE DA FLORESTA (
 
 O banco tem 3 tabelas: usuario (idUsuario, nome, email, senha, dtCadastro), pratica (idPratica, fkUsuario, dtHora, duracaoSegundos, ciclos) e diario (idDiario, fkPratica UNIQUE, texto, dtHora). usuario 1:N pratica e pratica 1:1 diario (a reflexão é opcional).
 
-Preciso que você aja como um professor, não quero que você mexa no código diretamente, mas sim que você me explique detalhadamente o passo a passo sobre o que fazer e como para chegar ao resultado esperar.
+Preciso que você aja como um professor, não quero que você mexa no código diretamente (a não ser que eu autorize), mas sim que você me explique detalhadamente o passo a passo sobre o que você fez para que eu autorize implementar.
