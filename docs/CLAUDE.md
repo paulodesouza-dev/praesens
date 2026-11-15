@@ -28,6 +28,7 @@ O código precisa parecer escrito por mim, usando só o que já aprendi.
 - Exceções: Chart.js e as fontes do projeto.
 - Se precisar de algo fora das listas, diga qual comando seria, explique e proponha uma alternativa básica antes de usar.
 - O web-data-viz exige coisas fora das listas (Express, consultas SQL, fetch, sessionStorage). Quando surgirem, avise, explique e pergunte antes.
+- nunca dê commits por conta própria
 
 ## Estilo
 - Cada página é um único .html: <style> no <head> e <script> depois do </html>. O que for da API fica nos arquivos do web-data-viz.
