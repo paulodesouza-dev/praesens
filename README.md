@@ -123,7 +123,7 @@ A samambaia é uma planta que gosto muito, e não só pela estética. Essa é um
 # 1. Clone o repositório
 git clone https://github.com/paulodesouza-dev/praesens.git
 
-# 2. Entre na pasta
+# 2. Entre no diretório
 cd praesens
 ```
 
