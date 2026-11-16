@@ -36,3 +36,9 @@ O código precisa parecer escrito por mim, usando só o que já aprendi.
 - Nomes de variáveis e funções em português. Inputs sempre type="text", convertidos com Number().
 - Estrutura linear, poucas funções, a solução mais básica que funcione, ainda mais se forem curtas e funcionais.
 - Validações só as do projeto: campos vazios, e-mail válido, senha com 8+ caracteres e reflexão não vazia.
+
+## web-data-viz (resumo)
+- Fluxo de um dado: `public/*.html` (fetch) → `src/routes` → `src/controllers` (validação) → `src/models` (SQL) → `src/database/config.js` (credenciais do `.env`). O `app.js` registra as rotas.
+- Rodar: escolher o ambiente nas linhas 1 e 2 do `app.js`, preencher `.env` ou `.env.dev`, `npm i`, `npm start`.
+- O template é do AquaTech: empresa, aquario, aviso e medida não fazem parte do Praesens. O `usuarioController` exige empresa e aquário e precisa ser adaptado ao schema do Praesens.
+- Detalhes completos (padrão do front, mapa de rotas do Praesens, limitações do template): ler o doc do projeto `claude/web-data-viz.md` antes de qualquer trabalho no back-end.
