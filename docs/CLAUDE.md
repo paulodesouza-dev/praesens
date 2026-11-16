@@ -6,7 +6,7 @@ Projeto Individual da Sprint 3 (SPTech): plataforma web de respiração guiada, 
 - NOITE DA FLORESTA (#0E1612): cor principal do background
 - SÁLVIA (#A9CBA3): textos, ícones e gráficos
 - LUZ (#DDAA4F): botões e destaques
-- Fontes: Marcellus nos títulos e Karla nos textos
+- Fontes: Marcellus nos títulos e nunito nos textos
 
 ## Banco (3 tabelas)
 - usuario (idUsuario, nome, email, senha, dtCadastro)
