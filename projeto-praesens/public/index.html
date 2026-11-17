@@ -34,7 +34,7 @@
         text-decoration: none;
       }
 
-      .header {
+      .cabecalho {
         height: 80px;
         padding: 0 48px;
         display: flex;
@@ -43,7 +43,7 @@
         background-color: #0e1612;
       }
 
-      .logo {
+      .logo-praesens {
         display: flex;
         align-items: center;
         gap: 10px;
@@ -51,32 +51,32 @@
         font-size: 24px;
       }
 
-      .logo img {
+      .logo-praesens img {
         height: 40px;
       }
 
-      .nav {
+      .menu {
         display: flex;
         gap: 16px;
       }
 
-      .nav a {
+      .menu a {
         font-size: 14px;
         font-weight: 700;
         color: #a9cba3;
         padding: 6px 12px;
       }
 
-      .nav a:hover {
+      .menu a:hover {
         color: #ffffff;
       }
 
-      .nav .ativo {
+      .menu .pagina-atual {
         background-color: #19211d;
         border-radius: 12px 0 12px 0;
       }
 
-      .principal {
+      .conteudo-central {
         flex: 1;
         display: flex;
         flex-direction: column;
@@ -86,20 +86,20 @@
         padding: 0 24px;
       }
 
-      .principal h1 {
+      .conteudo-central h1 {
         font-family: "Marcellus", serif;
         font-size: 48px;
         font-weight: 400;
         margin: 0 0 8px 0;
       }
 
-      .principal p {
+      .conteudo-central p {
         font-size: 18px;
         font-weight: 300;
         margin: 0 0 40px 0;
       }
 
-      .botao {
+      .botao-comecar {
         font-size: 14px;
         font-weight: 700;
         color: #1a1508;
@@ -128,25 +128,25 @@
   </head>
 
   <body>
-    <div class="header">
-      <div class="logo">
+    <div class="cabecalho">
+      <div class="logo-praesens">
         <img src="assets/readme/logo.svg" alt="Samambaia" />
         <span>Praesens</span>
       </div>
-      <div class="nav">
-        <a class="ativo" href="index.html">Início</a>
+      <div class="menu">
+        <a class="pagina-atual" href="index.html">Início</a>
         <a href="login.html">Entrar</a>
         <a href="cadastro.html">Criar conta</a>
       </div>
     </div>
 
-    <div class="principal">
-      <div class="logo">
+    <div class="conteudo-central">
+      <div class="logo-praesens">
         <img style="height: 90px;" src="assets/readme/logo.svg" alt="Samambaia" />
         <span style="font-size: 72px;">Praesens</span>
       </div>
       <p>Plataforma para meditar, registrar e acompanhar o seu progresso.</p>
-      <a class="botao" href="cadastro.html">Começar</a>
+      <a class="botao-comecar" href="cadastro.html">Começar</a>
     </div>
 
     <div class="rodape">
