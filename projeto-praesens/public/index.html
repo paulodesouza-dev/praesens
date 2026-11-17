@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Praesens | Início</title>
+
+    <link rel="icon" type="image/svg+xml" href="./assets/icon/favicon.svg" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Marcellus&family=Nunito+Sans:wght@300;400;700&display=swap"
+    />
+
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        font-family: "Nunito Sans", sans-serif;
+        color: #a9cba3;
+        background-color: #0e1612;
+        background-image:
+          linear-gradient(rgba(14, 22, 18, 0.94), rgba(14, 22, 18, 0.96)),
+          url("assets/imagens/carbonifero.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .header {
+        height: 80px;
+        padding: 0 48px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #0e1612;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-family: "Marcellus", serif;
+        font-size: 24px;
+      }
+
+      .logo img {
+        height: 40px;
+      }
+
+      .nav {
+        display: flex;
+        gap: 16px;
+      }
+
+      .nav a {
+        font-size: 14px;
+        font-weight: 700;
+        color: #a9cba3;
+        padding: 6px 12px;
+      }
+
+      .nav a:hover {
+        color: #ffffff;
+      }
+
+      .nav .ativo {
+        background-color: #19211d;
+        border-radius: 12px 0 12px 0;
+      }
+
+      .principal {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0 24px;
+      }
+
+      .principal h1 {
+        font-family: "Marcellus", serif;
+        font-size: 48px;
+        font-weight: 400;
+        margin: 0 0 8px 0;
+      }
+
+      .principal p {
+        font-size: 18px;
+        font-weight: 300;
+        margin: 0 0 40px 0;
+      }
+
+      .botao {
+        font-size: 14px;
+        font-weight: 700;
+        color: #1a1508;
+        background-color: #ddaa4f;
+        padding: 14px 32px;
+        border-radius: 16px 0 16px 0;
+      }
+
+      .rodape {
+        padding: 35px 42px;
+        font-family: "Nunito", serif;
+        font-size: 19px;
+        background-color: #08100c;
+         display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+      }
+
+      .criado {
+        display: block;
+        margin-top: 24px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="logo">
+        <img src="assets/readme/logo.svg" alt="Samambaia" />
+        <span>Praesens</span>
+      </div>
+      <div class="nav">
+        <a class="ativo" href="index.html">Início</a>
+        <a href="login.html">Entrar</a>
+        <a href="cadastro.html">Criar conta</a>
+      </div>
+    </div>
+
+    <div class="principal">
+      <h1>Praesens</h1>
+      <p>Plataforma para meditar, registrar e acompanhar o seu progresso.</p>
+      <a class="botao" href="cadastro.html">Começar</a>
+    </div>
+
+    <div class="rodape">
+  <span>Esse é um projeto acadêmico feito com o objetivo de testar meus conhecimentos técnicos.</span>
+  <span>Criado por: Paulo Henrique de Souza</span>
+</div>
+
+  </body>
+</html>

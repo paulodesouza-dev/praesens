@@ -24,10 +24,11 @@ Projeto Individual da Sprint 3 (SPTech): plataforma web de respiração guiada, 
 O código precisa parecer escrito por mim, usando só o que já aprendi.
 - BÁSICO (padrão): HTML (div, span, input, button, br, id, class, onclick, style); CSS no <style>; JS com let, Number(), operadores, comparações, if/else, && || !, for, vetores (push, length, [i]), objetos simples, funções sem parâmetro chamadas por onclick, template string, length/includes/startsWith/endsWith, console.log, innerHTML.
 - COM CAUTELA (só se simplificar de verdade e explicando o comando): while, break, continue, pop, splice, indexOf, join, Math.floor, Math.round, Math.random, toFixed, isNaN, trim, toUpperCase, toLowerCase.
-- PROIBIDO (ainda não aprendi): querySelector, forEach/map/filter/reduce/sort, switch, localStorage, setTimeout e qualquer coisa fora das listas.
+- LIBERADOS PELO USUÁRIO (usar conforme necessário, explicando o comando na primeira vez): setInterval, setTimeout, fetch (com .then), sessionStorage.
+- PROIBIDO (ainda não aprendi): querySelector, forEach/map/filter/reduce/sort, switch, localStorage e qualquer coisa fora das listas.
 - Exceções: Chart.js e as fontes do projeto.
 - Se precisar de algo fora das listas, diga qual comando seria, explique e proponha uma alternativa básica antes de usar.
-- O web-data-viz exige coisas fora das listas (Express, consultas SQL, fetch, sessionStorage). Quando surgirem, avise, explique e pergunte antes.
+- O web-data-viz exige coisas fora das listas (Express, consultas SQL). Quando surgirem, avise, explique e pergunte antes.
 - nunca dê commits por conta própria
 
 ## Estilo
@@ -39,6 +40,6 @@ O código precisa parecer escrito por mim, usando só o que já aprendi.
 
 ## web-data-viz (resumo)
 - Fluxo de um dado: `public/*.html` (fetch) → `src/routes` → `src/controllers` (validação) → `src/models` (SQL) → `src/database/config.js` (credenciais do `.env`). O `app.js` registra as rotas.
-- Rodar: escolher o ambiente nas linhas 1 e 2 do `app.js`, preencher `.env` ou `.env.dev`, `npm i`, `npm start`.
+- Rodar: escolher o ambiente na linha 1 do `app.js`, preencher `.env` ou `.env.dev`, `npm i`, `npm start`.
 - O template é do AquaTech: empresa, aquario, aviso e medida não fazem parte do Praesens. O `usuarioController` exige empresa e aquário e precisa ser adaptado ao schema do Praesens.
 - Detalhes completos (padrão do front, mapa de rotas do Praesens, limitações do template): ler o doc do projeto `claude/web-data-viz.md` antes de qualquer trabalho no back-end.
