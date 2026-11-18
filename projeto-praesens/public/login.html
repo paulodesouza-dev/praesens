@@ -13,71 +13,10 @@
       href="https://fonts.googleapis.com/css2?family=Marcellus&family=Nunito+Sans:wght@300;400;700&display=swap"
     />
 
+    <link rel="stylesheet" href="./css/estilo.css" />
+
     <style>
-      body {
-        margin: 0;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        font-family: "Nunito Sans", sans-serif;
-        color: #a9cba3;
-        background-color: #0e1612;
-        background-image:
-          linear-gradient(rgba(14, 22, 18, 0.94), rgba(14, 22, 18, 0.96)),
-          url("assets/imagens/carbonifero.jpg");
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-      }
-
-      a {
-        text-decoration: none;
-      }
-
-      .cabecalho {
-        height: 80px;
-        padding: 0 48px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background-color: #0e1612;
-      }
-
-      .logo-praesens {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        font-family: "Marcellus", serif;
-        font-size: 24px;
-      }
-
-      .logo-praesens img {
-        height: 40px;
-      }
-
-      .menu {
-        display: flex;
-        gap: 16px;
-      }
-
-      .menu a {
-        font-size: 14px;
-        font-weight: 700;
-        color: #a9cba3;
-        padding: 6px 12px;
-      }
-
-      .menu .pagina-atual {
-        background-color: #19211d;
-        border-radius: 12px 0 12px 0;
-      }
-
       .conteudo-central {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
         padding: 40px 24px;
       }
 
@@ -98,6 +37,11 @@
         font-weight: 400;
         text-align: center;
         margin: 0 0 8px 0;
+      }
+
+      .cartao-login .botao {
+        margin-top: 8px;
+        padding: 14px;
       }
 
       .campo {
@@ -123,19 +67,6 @@
         border-color: #ddaa4f;
       }
 
-      .botao-entrar {
-        margin-top: 8px;
-        padding: 14px;
-        font-family: "Nunito Sans", sans-serif;
-        font-size: 14px;
-        font-weight: 700;
-        color: #1a1508;
-        background-color: #ddaa4f;
-        border: none;
-        border-radius: 16px 0 16px 0;
-        cursor: pointer;
-      }
-
       .mensagem {
         min-height: 20px;
         font-size: 14px;
@@ -151,18 +82,6 @@
       .link-cadastro a {
         color: #ddaa4f;
         font-weight: 700;
-      }
-
-      .rodape {
-        padding: 35px 42px;
-        font-family: "Nunito", serif;
-        font-size: 19px;
-        background-color: #08100c;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 24px;
-        flex-wrap: wrap;
       }
     </style>
   </head>
@@ -186,15 +105,23 @@
 
         <div class="campo">
           <span>E-mail</span>
-          <input id="ipt_email" type="text" placeholder="seuemail@exemplo.com" />
+          <input
+            id="ipt_email"
+            type="text"
+            placeholder="seuemail@exemplo.com"
+          />
         </div>
 
         <div class="campo">
           <span>Senha</span>
-          <input id="ipt_senha" type="password" placeholder="Mínimo de 8 caracteres" />
+          <input
+            id="ipt_senha"
+            type="password"
+            placeholder="Mínimo de 8 caracteres"
+          />
         </div>
 
-        <button class="botao-entrar" onclick="entrar()">Entrar</button>
+        <button class="botao" onclick="entrar()">Entrar</button>
 
         <div class="mensagem" id="div_mensagem"></div>
 
@@ -205,8 +132,19 @@
     </div>
 
     <div class="rodape">
-      <span>Esse é um projeto acadêmico feito com o objetivo de testar meus conhecimentos técnicos.</span>
-      <span>Criado por: <a href="https://github.com/paulodesouza-dev" target="_blank" style="color: #ccff6c;">Paulo Henrique de Souza</a></span>
+      <span
+        >Esse é um projeto acadêmico feito com o objetivo de testar meus
+        conhecimentos técnicos.</span
+      >
+      <span
+        >Criado por:
+        <a
+          href="https://github.com/paulodesouza-dev"
+          target="_blank"
+          style="color: #ccff6c"
+          >Paulo Henrique de Souza</a
+        ></span
+      >
     </div>
   </body>
 </html>

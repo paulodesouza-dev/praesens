@@ -32,7 +32,7 @@ O código precisa parecer escrito por mim, usando só o que já aprendi.
 - nunca dê commits por conta própria
 
 ## Estilo
-- Cada página é um único .html: <style> no <head> e <script> depois do </html>. O que for da API fica nos arquivos do web-data-viz.
+- Estilo comum a todas as páginas (fundo, fontes, cabeçalho, menu, botão, rodapé) fica em public/css/estilo.css, ligado com <link>. No <style> do <head> de cada página fica só o estilo próprio dela. O <script> fica depois do </html>. O que for da API fica nos arquivos do web-data-viz.
 - Acesso direto pelo id (ipt_nome.value, div_mensagem.innerHTML), com prefixos ipt_ e div_.
 - Nomes de variáveis e funções em português. Inputs sempre type="text", convertidos com Number().
 - Estrutura linear, poucas funções, a solução mais básica que funcione, ainda mais se forem curtas e funcionais.
