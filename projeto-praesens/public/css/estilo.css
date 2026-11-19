@@ -53,7 +53,7 @@ a {
 
 .menu .pagina-atual {
   background-color: #19211d;
-  border-radius: 12px 0 12px 0;
+  border-radius: 12px;
 }
 
 .conteudo-central {
@@ -73,7 +73,7 @@ a {
   background-color: #ddaa4f;
   padding: 14px 32px;
   border: none;
-  border-radius: 16px 0 16px 0;
+  border-radius: 16px;
   cursor: pointer;
 }
 
