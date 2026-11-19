@@ -15,12 +15,6 @@
 
     <link rel="stylesheet" href="./css/estilo.css" />
 
-    <style>
-      .conteudo-central {
-        padding: 40px 24px;
-      }
-    </style>
-  </head>
 
   <body>
     <div class="cabecalho">
@@ -41,17 +35,20 @@
 
         <div class="campo">
           <span>Nome</span>
-          <input id="ipt_nome" type="text" placeholder="Paulo Souza" />
+          <input id="ipt_nome" type="text" placeholder="Insira seu nome" />
         </div>
 
         <div class="campo">
           <span>Email</span>
-          <input id="ipt_email" type="text" placeholder="paulosouza@teste.com" />
+          <input id="ipt_email" type="text" placeholder="seuemaill@teste.com" />
         </div>
 
         <div class="campo">
           <span>Senha</span>
-          <input id="ipt_senha" type="password" placeholder="Mínimo de 8 caracteres" />
+          <input
+            id="ipt_senha"
+            type="password"
+            placeholder="faça uma senha de no mínimo 8 caracteres"/>
         </div>
 
         <button class="botao" onclick="cadastrar()">Criar conta</button>
@@ -65,8 +62,10 @@
     </div>
 
     <div class="rodape">
-      <span>Esse é um projeto acadêmico feito com o objetivo de testar meus conhecimentos técnicos.</span>
-      <span>Criado por: <a href="https://github.com/paulodesouza-dev" target="_blank" style="color: #ccff6c">Paulo Henrique de Souza</a></span>
+      <span
+        >Esse é um projeto acadêmico feito com o objetivo de testar meus
+        conhecimentos técnicos.</span>
+      <span> Criado por: <a href="https://github.com/paulodesouza-dev" target="_blank" style="color: #ccff6c">Paulo Henrique de Souza</a> </span>
     </div>
   </body>
 </html>
@@ -78,13 +77,19 @@
     let senha = ipt_senha.value;
 
     if (nome == "" || email == "" || senha == "") {
-      div_mensagem.innerHTML = "Nome, email e senha não podem estar vazios";
+      div_mensagem.innerHTML = "Nome email e senha não podem estar vazios";
     } else if (!email.includes("@") || !email.includes(".")) {
       div_mensagem.innerHTML = "Email inválido!!";
     } else if (senha.length < 8) {
       div_mensagem.innerHTML = "Sua senha precisa ter pelo menos 8 caracteres";
     } else {
 
+
+
+
+
+
+      
       // Enviando o valor da nova input
       fetch("/usuarios/cadastrar", {
         method: "POST",
@@ -98,12 +103,12 @@
         }),
       }).then(function (resposta) {
         if (resposta.ok) {
-          div_mensagem.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+          div_mensagem.innerHTML = "Cadastro realizado, agora faça o login";
           setTimeout(function () {
             window.location = "login.html";
           }, 2000);
         } else {
-          div_mensagem.innerHTML = "Houve um erro ao tentar realizar o cadastro!";
+          div_mensagem.innerHTML = "Algum erro ao tentar realizar o cadastro";
         }
       });
     }
