@@ -63,10 +63,6 @@
         outline: none;
       }
 
-      .campo input:focus {
-        border-color: #ddaa4f;
-      }
-
       .mensagem {
         min-height: 20px;
         font-size: 14px;
@@ -104,11 +100,11 @@
         <h1>Preencha para entrar</h1>
 
         <div class="campo">
-          <span>E-mail</span>
+          <span>Email</span>
           <input
             id="ipt_email"
             type="text"
-            placeholder="seuemail@exemplo.com"
+            placeholder="paulosouza@teste.com"
           />
         </div>
 
@@ -155,13 +151,12 @@
     let senha = ipt_senha.value;
 
     if (email == "" || senha == "") {
-      div_mensagem.innerHTML = "Preencha todos os campos.";
+      div_mensagem.innerHTML = "Email e senha não podem estar vazios";
     } else if (!email.includes("@") || !email.includes(".")) {
-      div_mensagem.innerHTML = "Digite um e-mail válido.";
+      div_mensagem.innerHTML = "Email inválido!!";
     } else if (senha.length < 8) {
-      div_mensagem.innerHTML = "A senha precisa ter pelo menos 8 caracteres.";
+      div_mensagem.innerHTML = "Sua senha precisa ter pelo menos 8 caracteres";
     } else {
-      div_mensagem.innerHTML = "Entrando...";
 
       fetch("/usuarios/autenticar", {
         method: "POST",
@@ -176,10 +171,12 @@
             sessionStorage.ID_USUARIO = usuario.id;
             sessionStorage.NOME_USUARIO = usuario.nome;
             sessionStorage.EMAIL_USUARIO = usuario.email;
-            window.location = "dashboard.html";
+            setTimeout(function () {
+              window.location = "dashboard.html";
+            }, 1000); // apenas para exibir o loading
           });
         } else {
-          div_mensagem.innerHTML = "E-mail ou senha incorretos.";
+          div_mensagem.innerHTML = "Email ou senha incorretos....";
         }
       });
     }
