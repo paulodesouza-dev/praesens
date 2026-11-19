@@ -51,6 +51,11 @@
             placeholder="faça uma senha de no mínimo 8 caracteres"/>
         </div>
 
+        <div class="campo">
+          <span>Confirmar senha</span>
+          <input id="ipt_confirmar" type="password" placeholder="digite a senha novamente" />
+        </div>
+
         <button class="botao" onclick="cadastrar()">Criar conta</button>
 
         <div class="mensagem" id="div_mensagem"></div>
@@ -75,13 +80,16 @@
     let nome = ipt_nome.value;
     let email = ipt_email.value;
     let senha = ipt_senha.value;
+    let confirmar = ipt_confirmar.value;
 
-    if (nome == "" || email == "" || senha == "") {
+    if (nome == "" || email == "" || senha == "" || confirmar == "") {
       div_mensagem.innerHTML = "Nome email e senha não podem estar vazios";
     } else if (!email.includes("@") || !email.includes(".")) {
       div_mensagem.innerHTML = "Email inválido!!";
     } else if (senha.length < 8) {
       div_mensagem.innerHTML = "Sua senha precisa ter pelo menos 8 caracteres";
+    } else if (senha != confirmar) {
+      div_mensagem.innerHTML = "As senhas não são iguais";
     } else {
 
 
