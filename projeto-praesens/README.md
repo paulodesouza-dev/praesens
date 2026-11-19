@@ -1,105 +1,191 @@
-<img src="https://user-images.githubusercontent.com/46379117/192358781-9ca879e4-e55e-4d0d-b876-f9a4a2ed9ae8.png" width="600px">
+<div align="center">
 
-_Web Data Visualization = Visualização de Dados na Web_
+<img src="assets/readme/banner.svg" alt="Praesens: esteja aqui e agora" width="100%">
 
-_Implementação de Referência para o seu Projeto de Primeiro Semestre_
+<br>
 
-<hr>
+![Status](https://img.shields.io/badge/status-em%20desenvolvimento-DDAA4F?style=flat-square&labelColor=0E1612)
+![SPTech](https://img.shields.io/badge/SPTech-projeto%20individual-A9CBA3?style=flat-square&labelColor=0E1612)
 
-# Como usar
+![HTML5](https://img.shields.io/badge/HTML5-0E1612?style=flat-square&logo=html5&logoColor=A9CBA3)
+![CSS3](https://img.shields.io/badge/CSS3-0E1612?style=flat-square&logo=css&logoColor=A9CBA3)
+![JavaScript](https://img.shields.io/badge/JavaScript-0E1612?style=flat-square&logo=javascript&logoColor=A9CBA3)
+![Node.js](https://img.shields.io/badge/Node.js-0E1612?style=flat-square&logo=nodedotjs&logoColor=A9CBA3)
+![MySQL](https://img.shields.io/badge/MySQL-0E1612?style=flat-square&logo=mysql&logoColor=A9CBA3)
 
-1. Clone este repositório em sua máquina.
+![Sobre](assets/readme/sobre.svg)
+![Funcionalidades](assets/readme/funcionalidades.svg)
+![Arquitetura](assets/readme/arquitetura.svg)
+![Identidade visual](assets/readme/identidade-visual.svg)
+![Tecnologias](assets/readme/tecnologias.svg)
+![Como rodar](assets/readme/como-rodar.svg)
+![Autor](assets/readme/autor.svg)
 
+</div>
 
-1. Crie, no Banco de Dados, as tabelas necessárias para o funcionamento deste projeto.
-- Siga as instruções no arquivo **/src/database/script-tabelas.sql**
+---
 
+## Sobre
 
-3. Acesse o arquivo **app.js** e parametrize o ambiente.
-- Se você estiver utilizando o Ambiente de Produção (remoto), comente a linha 2 e deixe habilitada a linha 1 onde está o valor **var ambiente_processo = 'producao';**
-- Se você estiver utilizando o Ambiente de Desenvolvimento (local), comente a linha 1 e deixe habilitada a linha 2 onde está o valor **var ambiente_processo = 'desenvolvimento';**
+A Praesens é uma plataforma web de atenção plena (mindfulness), respiração guiada e reflexão pessoal. O nome vem do latim praesens, "aqui e agora". O projeto foi desenvolvido como Projeto Individual da Sprint 3 na SPTech.
 
-4. Adicione as credenciais de Banco de Dados no arquivo **.env** ou em **.env.dev**, seguindo as instruções neste.
+O tema tem significado pessoal para mim, práticas de respiração e atenção ao presente me ajudam a cultivar paz e alegria. Com esse projeto, quero compartilhar o que sinto sobre esse tema com outras pessoas.
 
-5. Acesse este repositório no seu terminal (GitBash ou VSCode) e execute os comandos abaixo:
+---
 
+## Objetivos
+
+<div align="left">
+🌿 Criar um espaço digital para fazer práticas de respiração e atenção plena. <br> <br>
+🌿 Guiar práticas de respiração com instruções visuais, ritmo e temporização. <br> <br>
+🌿 Oferecer um espaço livre de escrita para pensamentos e reflexões, sem perguntas predefinidas. <br> <br>
+🌿 Registrar a jornada de cada pessoa e exibi-la em um dashboard com indicadores. <br> <br>
+🌿 Aplicar na prática os conteúdos do primeiro semestre na SPTech.
+</div>
+
+---
+
+## Funcionalidades
+
+| Tela | O que terá | Status |
+|---|---|:-:|
+| **Home** | Apresenta a proposta do Praesens e convida a pessoa a conhecer a plataforma | Planejado |
+| **Cadastro e login** | Criação de conta e acesso, com validação dos formulários em JavaScript | Planejado |
+| **Respiração guiada** | Prática interativa com instruções visuais, ritmo e temporização | Planejado |
+| **Diário pessoal** | Espaço livre para escrever pensamentos, sentimentos e reflexões | Planejado |
+| **Dashboard** | Painel visual para acompanhar a jornada, com indicadores das práticas | Planejado |
+
+---
+
+## Respiração guiada
+
+A prática guia o usuário por três momentos, representados por uma esfera que se expande, fica e se recolhe. Cada prática concluída será registrada no banco de dados.
+
+---
+
+## Dashboard
+
+**<div align="left"> Os indicadores previstos são:** </div>
+
+<div align="left">
+🌿 Quantidade de práticas realizadas. <br> <br>
+🌿 Tempo total de respiração. <br> <br>
+🌿 Histórico das práticas. <br> <br>
+🌿 Outras métricas a definir na etapa de Pesquisa e Inovação. <br>
+</div>
+
+---
+
+## Arquitetura
+
+Visão prevista da comunicação entre as camadas:
+
+```mermaid
+flowchart LR
+    A["Navegador<br>HTML, CSS e JavaScript"] -->|"requisição HTTP"| B["API Node.js"]
+    B -->|"comandos SQL"| C[("MySQL<br>VM Linux")]
+    C -->|"dados"| B
+    B -->|"resposta em JSON"| A
 ```
-npm i
-``` 
-_O comando acima irá instalar as bibliotecas necessárias para o funcionamento do projeto. As bibliotecas a serem instaladas estão listadas no arquivo **package.json** então é muito importante que este não seja alterado. Será criada uma nova pasta/diretório chamado **node_modules** quando o comando for finalizado, que é onde as bibliotecas estão localizadas. Não altere a pasta/diretório._
 
+---
+
+## Identidade visual
+
+A samambaia é uma planta que gosto muito, e não só pela estética. Essa é uma das plantas mais antigas do planeta e já ajudava a formar as grandes florestas do período Carbonífero, entre cerca de 359 e 299 milhões de anos atrás. Ou seja, ela já estava por aqui muito antes da nossa espécie sequer esboçar existir. Por esse e outros motivos, essa é a minha planta favorita, então decidi que precisava implementar nesse projeto de alguma forma!!
+<div align="center">
+
+<img src="assets/readme/logo.svg" alt="Símbolo do Praesens: uma samambaia com a ponta em ocre" width="90">
+
+</div>
+
+---
+
+## Tecnologias
+
+| Camada | Tecnologia | Uso previsto | Status |
+|---|---|---|:-:|
+| Estrutura | HTML5 | Todas as telas | Planejado |
+| Estilo | CSS3 | Identidade visual e responsividade | Planejado |
+| Lógica | JavaScript | Validação de formulários, respiração guiada e cálculos do dashboard | Planejado |
+| API | Node.js (web-data-viz) | Cadastro, login e consulta ao banco de dados | Planejado |
+| Banco de dados | MySQL, em uma VM Linux | Usuários, práticas e diário | Em uso |
+| Versionamento | Git e GitHub | Evolução do código | Em uso |
+| Planejamento | Trello | Organização das entregas | Em uso |
+
+---
+
+## Como rodar
+
+```bash
+# 1. Clone o repositório
+git clone https://github.com/paulodesouza-dev/praesens.git
+
+# 2. Entre no diretório
+cd praesens
 ```
-npm start
-``` 
 
-_O comando acima irá iniciar seu projeto e efetuar os comandos de acordo com a sua parametrização feita nos passos anteriores._
+---
 
-6. Para "ver" seu projeto funcionando, acesse em seu navegador o caminho **informado no terminal**.
+## Uso de IA
 
-7. Caso queira parar a execução, tecle **CTRL+C** no terminal em que o projeto está rodando.
+Assistentes de IA são usados como apoio ao aprendizado, para tirar dúvidas, revisar e entender erros, conforme as regras do projeto. O registro do que foi pedido, usado e alterado está no [Diário de Prompts](docs/diario-de-prompts/diario-de-prompts.md).
 
-## Adicionar novo recurso ao projeto
+---
 
-**"Recurso? O que é?"** Enquanto no Banco de Dados chamamos as tabelas de "entidades", quando tratamos de desenvolvimento WEB usamos a palavra "recurso" para se referir a algo que podemos criar, ler, atualizar ou deletar [1]. Estas ações são conhecidas como CRUD: Create, Read, Update e Delete. Para acessar cada ação, usamos os métodos HTTP: POST, GET, PUT e DELETE [2]. (Há outros verbos, porém com estes já conseguimos efetuar CRUDs). 
+## Autor
 
-**Tabela para ajudar a fazer a associação**
+<div align="center">
 
-<table>
-  <tr>
-    <th>C.R.U.D</th>
-    <th>Ação</th>
-    <th>Tradução</th>
-    <th>Verbo HTTP *</th>
-    <th>Comando BD</th>
-  </tr>
-  <tr>
-    <td>C</td>
-    <td>Create</td>
-    <td>Criar</td>
-    <td>POST</td>
-    <td>INSERT</td>
-  </tr>
-  <tr>
-    <td>R</td>
-    <td>Read</td>
-    <td>Ler</td>
-    <td>GET</td>
-    <td>SELECT</td>
-  </tr>
-  <tr>
-    <td>U</td>
-    <td>Update</td>
-    <td>Atualizar</td>
-    <td>PUT</td>
-    <td>UPDATE</td>
-  </tr>
-  <tr>
-    <td>D</td>
-    <td>Delete</td>
-    <td>Deletar</td>
-    <td>DELETE</td>
-    <td>DELETE</td>
-  </tr>
-</table>
+<a href="https://github.com/paulodesouza-dev">
+  <img src="https://github.com/paulodesouza-dev.png" width="110" alt="Foto de perfil - Paulo Henrique de Souza" style="border-radius: 50%;">
+</a>
 
-_* Você verá o verbo HTTP sendo apontado nos arquivos em /routes_
+### Paulo Henrique de Souza
 
-**"E no meu projeto, o que seria um recurso?"** Em web-data-viz manipulamos os recursos **usuário**, **aviso** e **medida**. Podemos conferir isso vendo para quais entidades foram criados os caminhos de inserção e captura de dados, que envolve os diretórios **routes**, **controllers** e **models**.
+Estudante da **São Paulo Tech School**
 
-Abaixo, uma figura que ajuda a compreender o caminho percorrido para, por exemplo, efetuar o cadastro de um usuário:
+[![GitHub](https://img.shields.io/badge/@paulodesouza-dev-0E1612?style=flat-square&logo=github&logoColor=A9CBA3)](https://github.com/paulodesouza-dev)
+
+</div>
+
+---
+
+## Observação
+
+Este projeto foi desenvolvido para fins acadêmicos, com o objetivo de aplicar os conhecimentos adquiridos durante o curso. Além do desenvolvimento técnico, o Praesens representa a minha relação pessoal com a respiração e práticas de atenção plena.
+
+<div align="center">
+
+</div> <br>
+
+---
+<div align="center">
+
+### English summary </div>
+
+*<div align="center"> A short overview for international readers. The full documentation is in Portuguese above. </div>* 
+
+### Context
+
+Praesens is a web platform for mindfulness, guided breathing and personal reflection. The name comes from the Latin *praesens*, meaning "present", and reflects the idea of being here and now. It is an individual project developed during my first semester at São Paulo Tech School (SPTech).
+
+**Why this project?** Breathing practices and present moment awareness help me cultivate peace and joy, and I want to share that experience with other people through a simple, calm and welcoming digital space.
+
+**Why a fern?** The fern is one of the oldest plants on Earth. It already helped form the great forests of the Carboniferous period, roughly 359 to 299 million years ago, long before our species existed. I personally find this amazing, it is my favorite plant, so it became the symbol of the project.
 
 
-![image](https://github.com/user-attachments/assets/d576f178-0da6-437e-b5c9-658e3ebaf6ca)
+### Planned features
 
+**Guided breathing:** an interactive practice with visual cues, rhythm and timing. <br>
+**Personal journal:** a free writing space for thoughts and reflections, with no predefined questions. <br>
+**Dashboard:** a visual overview of the user's journey, such as number of practices, total breathing time and history. <br>
+**Sign up and login:** user accounts with form validation in JavaScript. <br>
 
+### Tech stack
 
-**Entendi o que é um recurso e gostaria de adicionar um novo ao meu projeto! Como faz?**  
-- Primeiro, crie a tabela no Banco de Dados referente a este recurso. Exemplos de recursos comuns de serem adicionados ao projeto no primeiro semestre: Silo, Aquário, Sala, Andar, Endereço, Mercado, Prateleira, Unidade, Carro, Caminhão...  
-- Assim que criada a tabela, faça todo o caminho de **front-end → routes → controllers → models** replicando o que já existe!  
-- Exemplo, se você quiser a funcionalidade de adicionar um novo Aquário, deve criar arquivos referentes ao aquario nos diretórios e replicar também as funções.  
-- Dica: A implementação de AVISO já contém o CRUD completo! :wink:
- 
-### Fontes bibliográficas
+HTML, CSS and JavaScript on the front end, a Node.js API, and a MySQL database running on a Linux virtual machine. Version control with Git and GitHub, and planning with Trello.
 
-[1] https://datatracker.ietf.org/doc/html/rfc2396  
-[2] https://datatracker.ietf.org/doc/html/rfc7231
+### Status
+
+In development. The final presentation takes place between November 26 and December 4, 2026.
