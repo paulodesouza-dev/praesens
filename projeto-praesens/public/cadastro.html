@@ -82,12 +82,22 @@
     let senha = ipt_senha.value;
     let confirmar = ipt_confirmar.value;
 
+    // conta quantos espaços tem na senha
+    let espacos = 0;
+    for (let i = 0; i < senha.length; i++) {
+      if (senha[i] == " ") {
+        espacos++;
+      }
+    }
+
     if (nome == "" || email == "" || senha == "" || confirmar == "") {
       div_mensagem.innerHTML = "Nome email e senha não podem estar vazios";
     } else if (!email.includes("@") || !email.includes(".")) {
       div_mensagem.innerHTML = "Email inválido!!";
     } else if (senha.length < 8) {
       div_mensagem.innerHTML = "Sua senha precisa ter pelo menos 8 caracteres";
+    } else if (espacos > 0) {
+      div_mensagem.innerHTML = "A senha não pode ter espaços";
     } else if (senha != confirmar) {
       div_mensagem.innerHTML = "As senhas não são iguais";
     } else {

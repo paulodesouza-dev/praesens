@@ -76,10 +76,20 @@
     let email = ipt_email.value;
     let senha = ipt_senha.value;
 
+    // conta quantos espaços tem no email
+    let espacos = 0;
+    for (let i = 0; i < email.length; i++) {
+      if (email[i] == " ") {
+        espacos++;
+      }
+    }
+
     if (email == "" || senha == "") {
       div_mensagem.innerHTML = "Email e senha não podem estar vazios";
     } else if (!email.includes("@") || !email.includes(".")) {
       div_mensagem.innerHTML = "Email inválido!!";
+    } else if (espacos > 0) {
+      div_mensagem.innerHTML = "O email não pode ter espaços";
     } else if (senha.length < 8) {
       div_mensagem.innerHTML = "Sua senha precisa ter pelo menos 8 caracteres";
     } else {
