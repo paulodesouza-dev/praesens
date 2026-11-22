@@ -13,6 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Marcellus&family=Nunito+Sans:wght@300;400;700&display=swap"/>
 
     <link rel="stylesheet" href="./css/estilo.css" />
+    <link rel="stylesheet" href="./css/pratica.css" />
   </head>
 
   <body>
@@ -29,8 +30,8 @@
     </div>
 
     <div class="conteudo-central pagina-interna">
-      <h1>Olá, <span id="span_nome"></span></h1>
-      <p>Siga a esfera: inspire, segure e solte o ar, 4 segundos cada.</p>
+      <h1>Olá <span id="span_nome"></span></h1>
+      <p>Suspiro fisiológico: inspire, segure, inspire mais um pouco, segure e solte devagar.</p>
 
       <div class="esfera" id="div_esfera">Respire</div>
 
@@ -70,36 +71,36 @@
 
   span_nome.innerHTML = sessionStorage.NOME_USUARIO;
 
+  let fases = ["Inspire", "Segure", "Inspire mais", "Segure", "Solte"];
+  let tempos = [5, 2, 2, 2, 9];
+
   let tempo = 0;
   let ciclos = 0;
-  let contador = 4;
-  let fase = "Inspire";
+  let fase = 0;
+  let contador = tempos[0];
   let intervalo;
 
   function comecarPratica() {
     clearInterval(intervalo);
     div_mensagem.innerHTML = "";
-    div_esfera.innerHTML = `${fase}<br>${contador}`;
+    div_esfera.innerHTML = `${fases[fase]}<br>${contador}`;
 
     intervalo = setInterval(function () {
       tempo++;
       contador--;
 
       if (contador == 0) {
-        if (fase == "Inspire") {
-          fase = "Segure";
-        } else if (fase == "Segure") {
-          fase = "Solte";
-        } else {
-          fase = "Inspire";
+        fase++;
+        if (fase == fases.length) {
+          fase = 0;
           ciclos++;
         }
-        contador = 4;
+        contador = tempos[fase];
       }
 
       span_tempo.innerHTML = tempo;
       span_ciclos.innerHTML = ciclos;
-      div_esfera.innerHTML = `${fase}<br>${contador}`;
+      div_esfera.innerHTML = `${fases[fase]}<br>${contador}`;
     }, 1000);
   }
 
