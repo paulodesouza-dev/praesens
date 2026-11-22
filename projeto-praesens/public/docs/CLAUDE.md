@@ -17,14 +17,14 @@ Projeto Individual da Sprint 3 (SPTech): plataforma web de respiração guiada, 
 ## Como trabalhar
 - Sou iniciante. Você pode implementar direto no código, mas SEMPRE me diga antes o que pretende fazer e espere meu OK.
 - Depois de implementar, liste cada alteração em uma linha: o que foi feito e por quê.
-- Sem comentários dentro do código.
+- Sem comentários dentro do código (estritamente proibido). Só ficam os comentários originais do template web-data-viz.
 - O caminho local absoluto do projeto é: C:\Users\Paulo\Documents\Aulas\P.I\Projeto-Individual\praesens
 
 ## Regras de código
 O código precisa parecer escrito por mim, usando só o que já aprendi.
 - BÁSICO (padrão): HTML (div, span, input, button, br, id, class, onclick, style); CSS no <style>; JS com let, Number(), operadores, comparações, if/else, && || !, for, vetores (push, length, [i]), objetos simples, funções sem parâmetro chamadas por onclick, template string, length/includes/startsWith/endsWith, console.log, innerHTML.
 - COM CAUTELA (só se simplificar de verdade e explicando o comando): while, break, continue, pop, splice, indexOf, join, Math.floor, Math.round, Math.random, toFixed, isNaN, trim, toUpperCase, toLowerCase.
-- LIBERADOS PELO USUÁRIO (usar conforme necessário, explicando o comando na primeira vez): setInterval, setTimeout, fetch (com .then), sessionStorage.
+- LIBERADOS PELO USUÁRIO (usar conforme necessário, explicando o comando na primeira vez): setInterval, clearInterval, setTimeout, fetch (com .then), sessionStorage (incluindo removeItem e clear).
 - PROIBIDO (ainda não aprendi): querySelector, forEach/map/filter/reduce/sort, switch, localStorage e qualquer coisa fora das listas.
 - Exceções: Chart.js e as fontes do projeto.
 - Se precisar de algo fora das listas, diga qual comando seria, explique e proponha uma alternativa básica antes de usar.
@@ -32,9 +32,9 @@ O código precisa parecer escrito por mim, usando só o que já aprendi.
 - nunca dê commits por conta própria
 
 ## Estilo
-- Estilo comum a todas as páginas (fundo, fontes, cabeçalho, menu, botão, rodapé) fica em public/css/estilo.css, ligado com <link>. No <style> do <head> de cada página fica só o estilo próprio dela. O <script> fica depois do </html>. O que for da API fica nos arquivos do web-data-viz.
+- Todo o CSS fica em public/css/estilo.css, ligado com <link>. As páginas não têm <style>. O <script> fica depois do </html>. O que for da API fica nos arquivos do web-data-viz.
 - Acesso direto pelo id (ipt_nome.value, div_mensagem.innerHTML), com prefixos ipt_ e div_.
-- Nomes de variáveis e funções em português. Inputs sempre type="text", convertidos com Number().
+- Nomes de variáveis e funções em português. Inputs sempre type="text", convertidos com Number(); a senha usa type="password" e a reflexão usa <textarea>.
 - Estrutura linear, poucas funções, a solução mais básica que funcione, ainda mais se forem curtas e funcionais.
 - Validações só as do projeto: campos vazios, e-mail válido, senha com 8+ caracteres e reflexão não vazia.
 

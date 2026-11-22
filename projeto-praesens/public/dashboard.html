@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Praesens - Dashboard</title>
+
+    <link rel="icon" type="image/svg+xml" href="./assets/icon/favicon.svg" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Marcellus&family=Nunito+Sans:wght@300;400;700&display=swap"/>
+
+    <link rel="stylesheet" href="./css/estilo.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  </head>
+
+  <body>
+    <div class="cabecalho">
+      <div class="logo-praesens">
+        <img src="assets/readme/logo.svg" alt="Samambaia" />
+        <span>Praesens</span>
+      </div>
+      <div class="menu">
+        <a href="pratica.html">Prática</a>
+        <a class="pagina-atual" href="dashboard.html">Dashboard</a>
+        <a href="index.html" onclick="sessionStorage.clear()">Sair</a>
+      </div>
+    </div>
+
+    <div class="conteudo-central pagina-interna">
+      <h1>Sua jornada, <span id="span_nome"></span></h1>
+
+      <div class="indicadores">
+        <div class="indicador">
+          <span>Práticas</span>
+          <span class="numero" id="span_total">0</span>
+          <span class="comparacao" id="span_comparacao_total"></span>
+        </div>
+        <div class="indicador">
+          <span>Tempo total (min)</span>
+          <span class="numero" id="span_minutos">0</span>
+          <span class="comparacao" id="span_comparacao_minutos"></span>
+        </div>
+        <div class="indicador">
+          <span>Tempo médio (min)</span>
+          <span class="numero" id="span_media">0</span>
+          <span class="comparacao" id="span_comparacao_media"></span>
+        </div>
+      </div>
+
+      <div class="painel">
+        <div class="topo-painel">
+          <div>
+            <h2>Práticas nos últimos 7 dias</h2>
+            <span class="comparacao">Minutos praticados em cada dia</span>
+          </div>
+          <div class="legenda">
+            <span><span class="quadrado cor-salvia"></span>Dias anteriores</span>
+            <span><span class="quadrado cor-luz"></span>Hoje</span>
+          </div>
+        </div>
+        <canvas id="grafico_semana"></canvas>
+      </div>
+
+      <div class="painel">
+        <div class="topo-painel">
+          <h2>Últimas 5 práticas</h2>
+          <a class="link-painel" href="pratica.html">Iniciar nova prática</a>
+        </div>
+        <div class="linha-tabela titulo-tabela">
+          <span>Data</span>
+          <span>Duração</span>
+          <span>Ciclos</span>
+        </div>
+        <div id="div_historico"></div>
+      </div>
+    </div>
+
+    <div class="rodape">
+      <span
+        >Esse é um projeto acadêmico feito com o objetivo de testar meus
+        conhecimentos técnicos.</span>
+      <span>Criado por:
+        <a
+          href="https://github.com/paulodesouza-dev"
+          target="_blank"
+          style="color: #ccff6c"
+          >Paulo Henrique de Souza</a
+        ></span
+      >
+    </div>
+  </body>
+</html>
+
+<script>
+  if (sessionStorage.ID_USUARIO == undefined) {
+    window.location = "login.html";
+  }
+
+  let idUsuario = sessionStorage.ID_USUARIO;
+  span_nome.innerHTML = sessionStorage.NOME_USUARIO;
+
+  fetch(`/praticas/resumo/${idUsuario}`).then(function (resposta) {
+    resposta.json().then(function (resumo) {
+      span_total.innerHTML = resumo.totalPraticas;
+      span_minutos.innerHTML = resumo.minutosTotais;
+      span_media.innerHTML = resumo.minutosMedios;
+    });
+  });
+
+  fetch(`/praticas/periodo/${idUsuario}/7/0`).then(function (resposta) {
+    resposta.json().then(function (atual) {
+      fetch(`/praticas/periodo/${idUsuario}/14/7`).then(function (resposta) {
+        resposta.json().then(function (passada) {
+          let diferencaPraticas = atual.praticas - passada.praticas;
+          let diferencaMedia = (Number(atual.media) - Number(passada.media)).toFixed(1);
+
+          let sinalPraticas = "";
+          if (diferencaPraticas >= 0) {
+            sinalPraticas = "+";
+          }
+
+          let sinalMedia = "";
+          if (diferencaMedia >= 0) {
+            sinalMedia = "+";
+          }
+
+          span_comparacao_total.innerHTML = `${sinalPraticas}${diferencaPraticas} em relação à semana passada`;
+          span_comparacao_minutos.innerHTML = `+${atual.minutos} min esta semana`;
+          span_comparacao_media.innerHTML = `${sinalMedia}${diferencaMedia} min em relação à semana passada`;
+        });
+      });
+    });
+  });
+
+  fetch(`/praticas/semana/${idUsuario}`).then(function (resposta) {
+    resposta.json().then(function (dias) {
+      let nomesDias = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
+      let hoje = new Date().getDay();
+      let rotulos = [];
+      let valores = [0, 0, 0, 0, 0, 0, 0];
+      let cores = [];
+
+      for (let i = 0; i < 7; i++) {
+        let dia = hoje - 6 + i;
+        if (dia < 0) {
+          dia = dia + 7;
+        }
+        rotulos.push(nomesDias[dia]);
+
+        if (i == 6) {
+          cores.push("#ddaa4f");
+        } else {
+          cores.push("#a9cba3");
+        }
+      }
+
+      for (let i = 0; i < dias.length; i++) {
+        let posicao = 6 - dias[i].diasAtras;
+        valores[posicao] = Number(dias[i].minutos);
+      }
+
+      new Chart(grafico_semana, {
+        type: "bar",
+        data: {
+          labels: rotulos,
+          datasets: [
+            {
+              label: "Minutos",
+              data: valores,
+              backgroundColor: cores,
+              borderRadius: 6,
+            },
+          ],
+        },
+        options: {
+          plugins: { legend: { display: false } },
+          scales: {
+            x: { grid: { display: false }, ticks: { color: "#a9cba3" } },
+            y: { beginAtZero: true, grid: { color: "#26312b" }, ticks: { color: "#a9cba3" } },
+          },
+        },
+      });
+    });
+  });
+
+  fetch(`/praticas/historico/${idUsuario}`).then(function (resposta) {
+    resposta.json().then(function (praticas) {
+      if (praticas.length == 0) {
+        div_historico.innerHTML = "Nenhuma prática ainda";
+      }
+
+      for (let i = 0; i < praticas.length; i++) {
+        let reflexao = praticas[i].texto;
+        let data = praticas[i].data;
+
+        if (reflexao == null) {
+          reflexao = "Sem reflexão";
+        }
+
+        if (praticas[i].hoje == 1) {
+          data = "Hoje";
+        }
+
+        div_historico.innerHTML += `
+          <div class="item-historico">
+            <div class="linha-tabela">
+              <span>${data}</span>
+              <span>${praticas[i].duracaoSegundos} s</span>
+              <span>${praticas[i].ciclos} ciclos</span>
+            </div>
+            <span class="reflexao-historico">${reflexao}</span>
+          </div>`;
+      }
+    });
+  });
+</script>

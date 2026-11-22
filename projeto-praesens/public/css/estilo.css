@@ -148,3 +148,183 @@ a {
   color: #ddaa4f;
   font-weight: 700;
 }
+
+.pagina-interna {
+  gap: 20px;
+  text-align: center;
+  padding: 40px 24px;
+}
+
+.pagina-interna h1 {
+  font-family: "Marcellus", serif;
+  font-size: 40px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.pagina-interna p {
+  font-size: 18px;
+  font-weight: 300;
+  margin: 0;
+}
+
+.botoes {
+  display: flex;
+  gap: 16px;
+}
+
+.botao-secundario {
+  color: #a9cba3;
+  background-color: transparent;
+  border: 1px solid #a9cba3;
+}
+
+.esfera {
+  width: 220px;
+  height: 220px;
+  margin: 50px 0;
+  border-radius: 50%;
+  border: 1px solid rgba(169, 203, 163, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Marcellus", serif;
+  font-size: 26px;
+}
+
+.info-pratica {
+  display: flex;
+  gap: 40px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.texto-reflexao {
+  width: 100%;
+  max-width: 500px;
+  height: 180px;
+  padding: 12px;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  color: #a9cba3;
+  background-color: #0e1612;
+  border: 1px solid #434840;
+  border-radius: 8px;
+  outline: none;
+  resize: none;
+}
+
+.indicadores {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.indicador {
+  flex: 1;
+  min-width: 200px;
+  padding: 24px;
+  background-color: #19211d;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  text-align: left;
+}
+
+.comparacao {
+  font-size: 13px;
+  color: #7d9a78;
+}
+
+.numero {
+  font-family: "Marcellus", serif;
+  font-size: 36px;
+  color: #ddaa4f;
+}
+
+.painel {
+  width: 100%;
+  max-width: 900px;
+  padding: 24px;
+  box-sizing: border-box;
+  background-color: #19211d;
+  border-radius: 24px;
+  text-align: left;
+}
+
+.painel h2 {
+  font-family: "Marcellus", serif;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0 0 4px 0;
+}
+
+.topo-painel {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.legenda {
+  display: flex;
+  gap: 16px;
+  font-size: 13px;
+}
+
+.quadrado {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 6px;
+  border-radius: 2px;
+}
+
+.cor-salvia {
+  background-color: #a9cba3;
+}
+
+.cor-luz {
+  background-color: #ddaa4f;
+}
+
+.link-painel {
+  font-size: 14px;
+  font-weight: 700;
+  color: #ddaa4f;
+}
+
+.linha-tabela {
+  display: flex;
+  font-weight: 700;
+}
+
+.linha-tabela span {
+  flex: 1;
+}
+
+.titulo-tabela {
+  padding: 10px 0;
+  font-size: 12px;
+  color: #7d9a78;
+  border-bottom: 1px solid #434840;
+}
+
+.item-historico {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px 0;
+  border-bottom: 1px solid #434840;
+  font-size: 14px;
+}
+
+.reflexao-historico {
+  font-weight: 300;
+}
