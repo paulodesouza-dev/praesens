@@ -14,7 +14,7 @@
     />
 
     <link rel="stylesheet" href="./css/estilo.css" />
-
+  </head>
 
   <body>
     <div class="cabecalho">
@@ -121,10 +121,15 @@
         }),
       }).then(function (resposta) {
         if (resposta.ok) {
-          div_mensagem.innerHTML = "Cadastro realizado, agora faça o login";
-          setTimeout(function () {
-            window.location = "login.html";
-          }, 2000);
+          resposta.json().then(function (usuario) {
+            sessionStorage.ID_USUARIO = usuario.id;
+            sessionStorage.NOME_USUARIO = usuario.nome;
+            sessionStorage.EMAIL_USUARIO = usuario.email;
+            div_mensagem.innerHTML = "Cadastro realizado! Indo para a sua primeira prática...";
+            setTimeout(function () {
+              window.location = "pratica.html";
+            }, 2000);
+          });
         } else {
           div_mensagem.innerHTML = "Algum erro ao tentar realizar o cadastro";
         }

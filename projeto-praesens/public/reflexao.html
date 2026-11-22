@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Praesens - Reflexão</title>
+
+    <link rel="icon" type="image/svg+xml" href="./assets/icon/favicon.svg" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Marcellus&family=Nunito+Sans:wght@300;400;700&display=swap"/>
+
+    <link rel="stylesheet" href="./css/estilo.css" />
+  </head>
+
+  <body>
+    <div class="cabecalho">
+      <div class="logo-praesens">
+        <img src="assets/readme/logo.svg" alt="Samambaia" />
+        <span>Praesens</span>
+      </div>
+      <div class="menu">
+        <a href="pratica.html">Prática</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="index.html" onclick="sessionStorage.clear()">Sair</a>
+      </div>
+    </div>
+
+    <div class="conteudo-central pagina-interna">
+      <h1>Como você se sente?</h1>
+      <p>Escreva o que percebeu durante a prática.</p>
+
+      <textarea class="texto-reflexao" id="ipt_reflexao" placeholder="Hoje eu percebi que..."></textarea>
+
+      <div class="botoes">
+        <button class="botao" onclick="salvarReflexao()">Salvar</button>
+        <button class="botao botao-secundario" onclick="pularReflexao()">Pular</button>
+      </div>
+
+      <div class="mensagem" id="div_mensagem"></div>
+    </div>
+
+    <div class="rodape">
+      <span
+        >Esse é um projeto acadêmico feito com o objetivo de testar meus
+        conhecimentos técnicos.</span>
+      <span>Criado por:
+        <a
+          href="https://github.com/paulodesouza-dev"
+          target="_blank"
+          style="color: #ccff6c"
+          >Paulo Henrique de Souza</a
+        ></span
+      >
+    </div>
+  </body>
+</html>
+
+<script>
+  if (sessionStorage.ID_PRATICA == undefined) {
+    window.location = "pratica.html";
+  }
+
+  function salvarReflexao() {
+    let texto = ipt_reflexao.value;
+
+    if (texto == "") {
+      div_mensagem.innerHTML = "A reflexão não pode estar vazia";
+    } else {
+      fetch("/diarios/registrar", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          idPraticaServer: sessionStorage.ID_PRATICA,
+          textoServer: texto,
+        }),
+      }).then(function (resposta) {
+        if (resposta.ok) {
+          sessionStorage.removeItem("ID_PRATICA");
+          window.location = "dashboard.html";
+        } else {
+          div_mensagem.innerHTML = "Erro ao salvar a reflexão";
+        }
+      });
+    }
+  }
+
+  function pularReflexao() {
+    sessionStorage.removeItem("ID_PRATICA");
+    window.location = "dashboard.html";
+  }
+</script>

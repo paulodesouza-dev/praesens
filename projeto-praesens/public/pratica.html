@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Praesens - Prática</title>
+
+    <link rel="icon" type="image/svg+xml" href="./assets/icon/favicon.svg" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Marcellus&family=Nunito+Sans:wght@300;400;700&display=swap"/>
+
+    <link rel="stylesheet" href="./css/estilo.css" />
+  </head>
+
+  <body>
+    <div class="cabecalho">
+      <div class="logo-praesens">
+        <img src="assets/readme/logo.svg" alt="Samambaia" />
+        <span>Praesens</span>
+      </div>
+      <div class="menu">
+        <a class="pagina-atual" href="pratica.html">Prática</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="index.html" onclick="sessionStorage.clear()">Sair</a>
+      </div>
+    </div>
+
+    <div class="conteudo-central pagina-interna">
+      <h1>Olá, <span id="span_nome"></span></h1>
+      <p>Siga a esfera: inspire, segure e solte o ar, 4 segundos cada.</p>
+
+      <div class="esfera" id="div_esfera">Respire</div>
+
+      <div class="info-pratica">
+        <span>Ciclos: <span id="span_ciclos">0</span></span>
+        <span>Tempo: <span id="span_tempo">0</span>s</span>
+      </div>
+
+      <div class="botoes">
+        <button class="botao" onclick="comecarPratica()">Começar</button>
+        <button class="botao botao-secundario" onclick="terminarPratica()">Terminar</button>
+      </div>
+
+      <div class="mensagem" id="div_mensagem"></div>
+    </div>
+
+    <div class="rodape">
+      <span
+        >Esse é um projeto acadêmico feito com o objetivo de testar meus
+        conhecimentos técnicos.</span>
+      <span>Criado por:
+        <a
+          href="https://github.com/paulodesouza-dev"
+          target="_blank"
+          style="color: #ccff6c"
+          >Paulo Henrique de Souza</a
+        ></span
+      >
+    </div>
+  </body>
+</html>
+
+<script>
+  if (sessionStorage.ID_USUARIO == undefined) {
+    window.location = "login.html";
+  }
+
+  span_nome.innerHTML = sessionStorage.NOME_USUARIO;
+
+  let tempo = 0;
+  let ciclos = 0;
+  let contador = 4;
+  let fase = "Inspire";
+  let intervalo;
+
+  function comecarPratica() {
+    clearInterval(intervalo);
+    div_mensagem.innerHTML = "";
+    div_esfera.innerHTML = `${fase}<br>${contador}`;
+
+    intervalo = setInterval(function () {
+      tempo++;
+      contador--;
+
+      if (contador == 0) {
+        if (fase == "Inspire") {
+          fase = "Segure";
+        } else if (fase == "Segure") {
+          fase = "Solte";
+        } else {
+          fase = "Inspire";
+          ciclos++;
+        }
+        contador = 4;
+      }
+
+      span_tempo.innerHTML = tempo;
+      span_ciclos.innerHTML = ciclos;
+      div_esfera.innerHTML = `${fase}<br>${contador}`;
+    }, 1000);
+  }
+
+  function terminarPratica() {
+    clearInterval(intervalo);
+
+    if (tempo == 0) {
+      div_mensagem.innerHTML = "Clique em Começar antes de terminar";
+    } else {
+      fetch("/praticas/registrar", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          idUsuarioServer: sessionStorage.ID_USUARIO,
+          duracaoServer: tempo,
+          ciclosServer: ciclos,
+        }),
+      }).then(function (resposta) {
+        if (resposta.ok) {
+          resposta.json().then(function (pratica) {
+            sessionStorage.ID_PRATICA = pratica.idPratica;
+            window.location = "reflexao.html";
+          });
+        } else {
+          div_mensagem.innerHTML = "Erro ao salvar a prática";
+        }
+      });
+    }
+  }
+</script>
