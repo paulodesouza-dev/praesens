@@ -13,6 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Marcellus&family=Nunito+Sans:wght@300;400;700&display=swap"/>
 
     <link rel="stylesheet" href="./css/estilo.css" />
+    <link rel="stylesheet" href="./css/dashboard.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   </head>
@@ -31,23 +32,18 @@
     </div>
 
     <div class="conteudo-central pagina-interna">
-      <h1>Sua jornada, <span id="span_nome"></span></h1>
+      <h1>Continue praticando <span id="span_nome"></span></h1>
 
       <div class="indicadores">
         <div class="indicador">
           <span>Práticas</span>
           <span class="numero" id="span_total">0</span>
-          <span class="comparacao" id="span_comparacao_total"></span>
+          <span class="subtitulo" id="span_comparacao_total"></span>
         </div>
         <div class="indicador">
           <span>Tempo total (min)</span>
           <span class="numero" id="span_minutos">0</span>
-          <span class="comparacao" id="span_comparacao_minutos"></span>
-        </div>
-        <div class="indicador">
-          <span>Tempo médio (min)</span>
-          <span class="numero" id="span_media">0</span>
-          <span class="comparacao" id="span_comparacao_media"></span>
+          <span class="subtitulo" id="span_comparacao_minutos"></span>
         </div>
       </div>
 
@@ -55,7 +51,7 @@
         <div class="topo-painel">
           <div>
             <h2>Práticas nos últimos 7 dias</h2>
-            <span class="comparacao">Minutos praticados em cada dia</span>
+            <span class="subtitulo">Minutos praticados em cada dia</span>
           </div>
           <div class="legenda">
             <span><span class="quadrado cor-salvia"></span>Dias anteriores</span>
@@ -107,7 +103,6 @@
     resposta.json().then(function (resumo) {
       span_total.innerHTML = resumo.totalPraticas;
       span_minutos.innerHTML = resumo.minutosTotais;
-      span_media.innerHTML = resumo.minutosMedios;
     });
   });
 
@@ -115,22 +110,21 @@
     resposta.json().then(function (atual) {
       fetch(`/praticas/periodo/${idUsuario}/14/7`).then(function (resposta) {
         resposta.json().then(function (passada) {
-          let diferencaPraticas = atual.praticas - passada.praticas;
-          let diferencaMedia = (Number(atual.media) - Number(passada.media)).toFixed(1);
+          let diferenca = atual.praticas - passada.praticas;
+          let diferencaMinutos = Number(atual.minutos) - Number(passada.minutos);
 
-          let sinalPraticas = "";
-          if (diferencaPraticas >= 0) {
-            sinalPraticas = "+";
+          let sinal = "";
+          if (diferenca >= 0) {
+            sinal = "+";
           }
 
-          let sinalMedia = "";
-          if (diferencaMedia >= 0) {
-            sinalMedia = "+";
+          let sinalMinutos = "";
+          if (diferencaMinutos >= 0) {
+            sinalMinutos = "+";
           }
 
-          span_comparacao_total.innerHTML = `${sinalPraticas}${diferencaPraticas} em relação à semana passada`;
-          span_comparacao_minutos.innerHTML = `+${atual.minutos} min esta semana`;
-          span_comparacao_media.innerHTML = `${sinalMedia}${diferencaMedia} min em relação à semana passada`;
+          span_comparacao_total.innerHTML = `${sinal}${diferenca} em relação à semana passada`;
+          span_comparacao_minutos.innerHTML = `${sinalMinutos}${diferencaMinutos.toFixed(1)} min em relação à semana passada`;
         });
       });
     });

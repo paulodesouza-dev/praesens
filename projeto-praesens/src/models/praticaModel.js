@@ -11,8 +11,7 @@ function registrar(idUsuario, duracao, ciclos) {
 function buscarResumo(idUsuario) {
     var instrucaoSql = `
         SELECT COUNT(*) AS totalPraticas,
-               IFNULL(ROUND(SUM(duracaoSegundos) / 60, 1), 0) AS minutosTotais,
-               IFNULL(ROUND(AVG(duracaoSegundos) / 60, 1), 0) AS minutosMedios
+               IFNULL(ROUND(SUM(duracaoSegundos) / 60, 1), 0) AS minutosTotais
         FROM pratica WHERE fkUsuario = ${idUsuario};
     `;
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
@@ -34,8 +33,7 @@ function buscarSemana(idUsuario) {
 function buscarPeriodo(idUsuario, inicio, fim) {
     var instrucaoSql = `
         SELECT COUNT(*) AS praticas,
-               IFNULL(ROUND(SUM(duracaoSegundos) / 60, 1), 0) AS minutos,
-               IFNULL(ROUND(AVG(duracaoSegundos) / 60, 1), 0) AS media
+               IFNULL(ROUND(SUM(duracaoSegundos) / 60, 1), 0) AS minutos
         FROM pratica
         WHERE fkUsuario = ${idUsuario}
           AND dtHora >= NOW() - INTERVAL ${inicio} DAY
