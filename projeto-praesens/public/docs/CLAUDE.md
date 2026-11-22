@@ -32,7 +32,7 @@ O código precisa parecer escrito por mim, usando só o que já aprendi.
 - nunca dê commits por conta própria
 
 ## Estilo
-- Todo o CSS fica em public/css/estilo.css, ligado com <link>. As páginas não têm <style>. O <script> fica depois do </html>. O que for da API fica nos arquivos do web-data-viz.
+- O CSS usado por mais de uma página fica em public/css/estilo.css. O que é de uma página só fica em public/css/<nome-da-pagina>.css (pratica.css, reflexao.css, dashboard.css), ligado depois do estilo.css. As páginas não têm <style>. O <script> fica depois do </html>. O que for da API fica nos arquivos do web-data-viz.
 - Acesso direto pelo id (ipt_nome.value, div_mensagem.innerHTML), com prefixos ipt_ e div_.
 - Nomes de variáveis e funções em português. Inputs sempre type="text", convertidos com Number(); a senha usa type="password" e a reflexão usa <textarea>.
 - Estrutura linear, poucas funções, a solução mais básica que funcione, ainda mais se forem curtas e funcionais.
