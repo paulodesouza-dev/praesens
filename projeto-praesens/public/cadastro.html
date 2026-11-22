@@ -48,7 +48,9 @@
           <input
             id="ipt_senha"
             type="password"
-            placeholder="faça uma senha de no mínimo 8 caracteres"/>
+            placeholder="faça uma senha de no mínimo 8 caracteres"
+            oninput="verificarSenha()"/>
+          <div class="requisitos" id="div_requisitos"></div>
         </div>
 
         <div class="campo">
@@ -76,19 +78,56 @@
 </html>
 
 <script>
+  let espacos = 0;
+  let maiusculas = 0;
+  let minusculas = 0;
+
+  function verificarSenha() {
+    let senha = ipt_senha.value;
+    espacos = 0;
+    maiusculas = 0;
+    minusculas = 0;
+
+    for (let i = 0; i < senha.length; i++) {
+      if (senha[i] == " ") {
+        espacos++;
+      } else if (senha[i] != senha[i].toLowerCase()) {
+        maiusculas++;
+      } else if (senha[i] != senha[i].toUpperCase()) {
+        minusculas++;
+      }
+    }
+
+    let requisitos = "";
+
+    if (senha.length >= 8) {
+      requisitos += `<span class="requisito-ok">✓ Pelo menos 8 caracteres</span>`;
+    } else {
+      requisitos += `<span class="requisito-falta">✗ Pelo menos 8 caracteres</span>`;
+    }
+
+    if (maiusculas > 0) {
+      requisitos += `<span class="requisito-ok">✓ Uma letra maiúscula</span>`;
+    } else {
+      requisitos += `<span class="requisito-falta">✗ Uma letra maiúscula</span>`;
+    }
+
+    if (minusculas > 0) {
+      requisitos += `<span class="requisito-ok">✓ Uma letra minúscula</span>`;
+    } else {
+      requisitos += `<span class="requisito-falta">✗ Uma letra minúscula</span>`;
+    }
+
+    div_requisitos.innerHTML = requisitos;
+  }
+
   function cadastrar() {
     let nome = ipt_nome.value;
     let email = ipt_email.value;
     let senha = ipt_senha.value;
     let confirmar = ipt_confirmar.value;
 
-    
-    let espacos = 0;
-    for (let i = 0; i < senha.length; i++) {
-      if (senha[i] == " ") {
-        espacos++;
-      }
-    }
+    verificarSenha();
 
     if (nome == "" || email == "" || senha == "" || confirmar == "") {
       div_mensagem.innerHTML = "Nome email e senha não podem estar vazios";
@@ -96,6 +135,8 @@
       div_mensagem.innerHTML = "Email inválido!!";
     } else if (senha.length < 8) {
       div_mensagem.innerHTML = "Sua senha precisa ter pelo menos 8 caracteres";
+    } else if (maiusculas == 0 || minusculas == 0) {
+      div_mensagem.innerHTML = "Sua senha precisa ter uma letra maiúscula e uma minúscula";
     } else if (espacos > 0) {
       div_mensagem.innerHTML = "A senha não pode ter espaços";
     } else if (senha != confirmar) {
@@ -125,7 +166,7 @@
             sessionStorage.ID_USUARIO = usuario.id;
             sessionStorage.NOME_USUARIO = usuario.nome;
             sessionStorage.EMAIL_USUARIO = usuario.email;
-            div_mensagem.innerHTML = "Cadastro realizado! Indo para a sua primeira prática...";
+            div_mensagem.innerHTML = "Cadastro feito, vamos respirar!!!";
             setTimeout(function () {
               window.location = "pratica.html";
             }, 2000);

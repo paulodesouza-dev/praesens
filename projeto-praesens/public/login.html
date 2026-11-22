@@ -42,7 +42,8 @@
         <div class="campo">
           <span>Senha</span>
           <input
-            id="ipt_senha" type="password" placeholder="Mínimo de 8 caracteres"/>
+            id="ipt_senha" type="password" placeholder="Mínimo de 8 caracteres" oninput="verificarSenha()"/>
+          <div class="requisitos" id="div_requisitos"></div>
         </div>
 
         <button class="botao" onclick="entrar()">Entrar</button>
@@ -72,9 +73,50 @@
 </html>
 
 <script>
+  let maiusculas = 0;
+  let minusculas = 0;
+
+  function verificarSenha() {
+    let senha = ipt_senha.value;
+    maiusculas = 0;
+    minusculas = 0;
+
+    for (let i = 0; i < senha.length; i++) {
+      if (senha[i] != senha[i].toLowerCase()) {
+        maiusculas++;
+      } else if (senha[i] != senha[i].toUpperCase()) {
+        minusculas++;
+      }
+    }
+
+    let requisitos = "";
+
+    if (senha.length >= 8) {
+      requisitos += `<span class="requisito-ok">Pelo menos 8 caracteres</span>`;
+    } else {
+      requisitos += `<span class="requisito-falta">Pelo menos 8 caracteres</span>`;
+    }
+
+    if (maiusculas > 0) {
+      requisitos += `<span class="requisito-ok">Uma letra maiúscula</span>`;
+    } else {
+      requisitos += `<span class="requisito-falta">Uma letra maiúscula</span>`;
+    }
+
+    if (minusculas > 0) {
+      requisitos += `<span class="requisito-ok">Uma letra minúscula</span>`;
+    } else {
+      requisitos += `<span class="requisito-falta">Uma letra minúscula</span>`;
+    }
+
+    div_requisitos.innerHTML = requisitos;
+  }
+
   function entrar() {
     let email = ipt_email.value;
     let senha = ipt_senha.value;
+
+    verificarSenha();
 
     let espacos = 0;
     for (let i = 0; i < email.length; i++) {
@@ -91,6 +133,8 @@
       div_mensagem.innerHTML = "O email não pode ter espaços";
     } else if (senha.length < 8) {
       div_mensagem.innerHTML = "Sua senha precisa ter pelo menos 8 caracteres";
+    } else if (maiusculas == 0 || minusculas == 0) {
+      div_mensagem.innerHTML = "Sua senha precisa ter uma letra maiúscula e uma minúscula";
     } else {
 
       fetch("/usuarios/autenticar", {
