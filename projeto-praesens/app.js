@@ -14,6 +14,8 @@ var app = express();
 
 var indexRouter = require("./src/routes/index");
 var usuarioRouter = require("./src/routes/usuarios");
+var praticaRouter = require("./src/routes/praticas");
+var diarioRouter = require("./src/routes/diarios");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -23,6 +25,8 @@ app.use(cors());
 
 app.use("/", indexRouter);
 app.use("/usuarios", usuarioRouter);
+app.use("/praticas", praticaRouter);
+app.use("/diarios", diarioRouter);
 
 app.listen(PORTA_APP, function () {
     console.log(`

@@ -60,7 +60,11 @@ function cadastrar(req, res) {
         usuarioModel.cadastrar(nome, email, senha)
             .then(
                 function (resultado) {
-                    res.json(resultado);
+                    res.json({
+                        id: resultado.insertId,
+                        nome: nome,
+                        email: email
+                    });
                 }
             ).catch(
                 function (erro) {
