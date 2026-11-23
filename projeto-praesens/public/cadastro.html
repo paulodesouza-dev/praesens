@@ -101,21 +101,21 @@
     let requisitos = "";
 
     if (senha.length >= 8) {
-      requisitos += `<span class="requisito-ok">✓ Pelo menos 8 caracteres</span>`;
+      requisitos += `<span class="requisito-ok">Pelo menos 8 caracteres</span>`;
     } else {
-      requisitos += `<span class="requisito-falta">✗ Pelo menos 8 caracteres</span>`;
+      requisitos += `<span class="requisito-falta">Pelo menos 8 caracteres</span>`;
     }
 
     if (maiusculas > 0) {
-      requisitos += `<span class="requisito-ok">✓ Uma letra maiúscula</span>`;
+      requisitos += `<span class="requisito-ok">Uma letra maiúscula</span>`;
     } else {
-      requisitos += `<span class="requisito-falta">✗ Uma letra maiúscula</span>`;
+      requisitos += `<span class="requisito-falta">Uma letra maiúscula</span>`;
     }
 
     if (minusculas > 0) {
-      requisitos += `<span class="requisito-ok">✓ Uma letra minúscula</span>`;
+      requisitos += `<span class="requisito-ok">Uma letra minúscula</span>`;
     } else {
-      requisitos += `<span class="requisito-falta">✗ Uma letra minúscula</span>`;
+      requisitos += `<span class="requisito-falta">Uma letra minúscula</span>`;
     }
 
     div_requisitos.innerHTML = requisitos;
