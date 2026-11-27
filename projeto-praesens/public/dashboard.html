@@ -110,6 +110,9 @@
     resposta.json().then(function (atual) {
       fetch(`/praticas/periodo/${idUsuario}/14/7`).then(function (resposta) {
         resposta.json().then(function (passada) {
+
+
+
           let diferenca = atual.praticas - passada.praticas;
           let diferencaMinutos = Number(atual.minutos) - Number(passada.minutos);
 
@@ -177,9 +180,9 @@
             y: { beginAtZero: true, grid: { color: "#26312b" }, ticks: { color: "#a9cba3" } },
           },
         },
-      });
+      })
     });
-  });
+  })
 
   fetch(`/praticas/historico/${idUsuario}`).then(function (resposta) {
     resposta.json().then(function (praticas) {
@@ -196,7 +199,7 @@
         }
 
         if (praticas[i].hoje == 1) {
-          data = "Hoje";
+          data = "Hoje"
         }
 
         div_historico.innerHTML += `
@@ -210,5 +213,5 @@
           </div>`;
       }
     });
-  });
+  })
 </script>

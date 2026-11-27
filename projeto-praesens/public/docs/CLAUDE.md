@@ -21,7 +21,6 @@ Projeto Individual da Sprint 3 (SPTech): plataforma web de respiração guiada, 
 - O caminho local absoluto do projeto é: C:\Users\Paulo\Documents\Aulas\P.I\Projeto-Individual\praesens
 
 ## Regras de código
-O código precisa parecer escrito por mim, usando só o que já aprendi.
 - BÁSICO (padrão): HTML (div, span, input, button, br, id, class, onclick, style); CSS no <style>; JS com let, Number(), operadores, comparações, if/else, && || !, for, vetores (push, length, [i]), objetos simples, funções sem parâmetro chamadas por onclick, template string, length/includes/startsWith/endsWith, console.log, innerHTML.
 - COM CAUTELA (só se simplificar de verdade e explicando o comando): while, break, continue, pop, splice, indexOf, join, Math.floor, Math.round, Math.random, toFixed, isNaN, trim, toUpperCase, toLowerCase.
 - LIBERADOS PELO USUÁRIO (usar conforme necessário, explicando o comando na primeira vez): setInterval, clearInterval, setTimeout, fetch (com .then), sessionStorage (incluindo removeItem e clear).
